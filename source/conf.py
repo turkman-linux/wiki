@@ -27,8 +27,10 @@ html_theme = 'alabaster'
 html_static_path = ['_static']
 
 html_sidebars = {
-    '**': [
+    '*/*': [
+        'anti-winzort.html',
         'about.html',
         'navigation.html',
-    ]
+    ],
+    '*': []
 }

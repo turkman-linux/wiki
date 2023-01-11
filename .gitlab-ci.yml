@@ -14,9 +14,7 @@ pages:
     pydefault 3.10
     python3.10 -m ensurepip
     pip3.10 install sphinx
-    make html
-    find build/html -type f -iname *.html -exec sed -i "s/.*\.js.*//g" {} \;
-    find build/html -type f -iname *.js -exec rm -rf {} \;
+    sh build.sh
     mkdir .public
     cp -r build/html/* .public
     mv .public public
