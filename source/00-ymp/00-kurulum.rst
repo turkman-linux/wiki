@@ -38,12 +38,13 @@ Kaynak kod `meson` komutu ile yapılandırılır.
 
 Derleme ve sisteme kurulma işlemi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+`ninja` komutu kullanılarak derleme işlemi yapılır. Derleme sonrasında `ninja install` komutu ile sisteme kurulur. Son olarak `ldconfig` komutu kullanılarak kütüphanesini sistem kütüphane önbelleğini güncellenir.
 
 .. code-block:: shell
 
 	# Derleme işlemi
 	$ ninja -C build
 	# Kurulma işlemi
-	$ ninja -C build install
-
+	$ ninja install -C build
+	$ ldconfig
 

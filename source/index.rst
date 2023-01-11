@@ -2,7 +2,7 @@ Sulix Wikiye Hoşgeldiniz
 ========================
 
 .. toctree::
-	:maxdepth: 999
+	:maxdepth: -1
 	:caption: İçindekiler:
 	:glob:
 
