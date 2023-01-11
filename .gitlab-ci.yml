@@ -14,7 +14,7 @@ pages:
     - pydefault 3.10
     - python3.10 -m ensurepip
     - pip3.10 install sphinx
-    - make
+    - make html latexpdf
     - mkdir .public
     - cp -r build/* .public
     - mv .public public
