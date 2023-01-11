@@ -13,7 +13,7 @@ Programlama
 	*-dersi
 
 EOF
-for sayfa in bash-dersi vala-dersi python-dersi makefile-dersi git-kullanimi ; do
+for sayfa in bash-dersi vala-dersi python-dersi makefile-dersi git-kullanimi docker-kullanimi ; do
     curl https://gitlab.com/sulincix/sayfalar/-/raw/master/rst/$sayfa.rst > source/99-kodlama/$sayfa-dersi.rst
 done
 
