@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'wiki'
+project = 'Sulix Wiki'
 copyright = 'Sulix Project 2023'
 author = 'sulix'
 
