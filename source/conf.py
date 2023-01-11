@@ -25,9 +25,10 @@ html_theme = 'alabaster'
 html_theme_options = {
     'font_family' : 'monospace',
     'footnote_bg': 'none',
+    'page_width': '100%',
+    'body_max_width': 'auto',
 
 }
-
 html_sidebars = {
     '**': [
         'about.html',
