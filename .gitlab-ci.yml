@@ -10,7 +10,7 @@ pages:
   image: registry.gitlab.com/sulix/devel/assets/docker-images
   script:
     - ymp repo --update
-    - ymp it make python3.10 --no-emerge
+    - ymp it make python3.10 python --no-emerge
     - pydefault 3.10
     - python3.10 -m ensurepip
     - pip3.10 install sphinx
