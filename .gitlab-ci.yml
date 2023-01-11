@@ -8,16 +8,18 @@
 pages:
   stage: deploy
   image: registry.gitlab.com/sulix/devel/assets/docker-images
-  script:
-    - ymp repo --update
-    - ymp it make python3.10 python --no-emerge
-    - pydefault 3.10
-    - python3.10 -m ensurepip
-    - pip3.10 install sphinx
-    - make html
-    - mkdir .public
-    - cp -r build/html/* .public
-    - mv .public public
+  script: |
+    ymp repo --update
+    ymp it make python3.10 python --no-emerge
+    pydefault 3.10
+    python3.10 -m ensurepip
+    pip3.10 install sphinx
+    make html
+    find build/html -type f -iname *.html -exec sed -i "s/.*\.js.*//g" {} \;
+    find build/html -type f -iname *.js -exec rm -rf {} \;
+    mkdir .public
+    cp -r build/html/* .public
+    mv .public public
   artifacts:
     paths:
       - public
