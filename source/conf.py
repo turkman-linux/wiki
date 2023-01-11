@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'wiki'
-copyright = '2023, sulix'
+copyright = 'Sulix Project 2023'
 author = 'sulix'
 
 # -- General configuration ---------------------------------------------------
@@ -23,5 +23,5 @@ language = 'tr'
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
-html_static_path = ['_static']
+#html_theme = 'alabaster'
+#html_static_path = ['_static']
