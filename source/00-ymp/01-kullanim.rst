@@ -67,12 +67,64 @@ Ymp çalışırken kendi içerisinde çeşitli değişkenler tanımlar ve bunlar
 
 **Not:** Tanımlanmamış olan tüm değişkenler **false** olarak kabul edilir.
 
-Diğre yol ise **/etc/ymp.yaml** dosyasında ymp bölümüne ekleyebilirsiniz.
+Diğer yol ise **/etc/ymp.yaml** dosyasında ymp bölümüne ekleyebilirsiniz.
 
-..code-block::shell
+Ymp kabuğu
+^^^^^^^^^^
+Ymp kendi içerisinde komut satırına sahiptir. Bu sayede istenilen işi bir betik dosyasına yazıp çalıştırmanız mümkündür.
+Ymp kabuğu başlatmak için **ymp shell** komutu kullanılır.
 
-	ymp:
-	   ...
-	   no-emerge: true
-	   ...
+.. code-block:: shell
+
+	$ ymp shell
+	-> Ymp >> install git
+
+Ymp kabugu ymp komutlarını ve parametrelerini kullanarak çalışır. Kabuk üzerinde normal işlemlerin yanında fazladan sadece kabukta çalışan ek işlemler bulunur. Bunlarla ilgili bilgi almak için **ymp help --all** komutu çıktısından yararlanabilirsiniz.
+
+Ymp kabuğu kendi içerisinde basit bir programlama dili yorumlayıcısı barındırır. Bunu kapsamlı bir programlama dili olarak düşünmemekte fayda vardır. Çünkü Bir programlama dilinin sahip olduğu özelliklerin çoğundan mahrumdur ve sadece ymp komutlarının çalıştırılması üzerine tasarlanmıştır.
+
+Açıklama satırları
+++++++++++++++++++
+**#** ile başlayan satırlar açıklama satırıdır. Bununla birlikte **:** komutu işlevsizdir ve açıklama satırı olarak kullanılabilir.
+
+.. code-block:: shell
+
+	# Bu bir açıklama satırıdır.
+	: Bu da bir açıklama satırıdır.
+
+Değişken tanımlama
+++++++++++++++++++
+Değişken tanımlamak için **set** kullanılır.
+**read** komutu ise klavyeden alınan değeri değişken olarak atar.
+Bir değişkenin değerini almak için **get** kullanılır.
+Değişkenler kullanılırken başlarına **$** işareti konulur.
+
+**Not:** Değişkenlerin herhangi bir karakter kısıtlaması bulunmamaktadır.
+Sayı, karakter veya türkçe karakter içerebilirler. (Emoji bile kullanabilirsiniz :D)
+
+Koşul tanımlama
++++++++++++++++
+**if** ifadesi ile başlayan satır koşul satırıdır ve **endif** ifadesi gelene kadarki satırlar koşul sağlandığında çalıştırılır.
+
+.. code-block:: shell
+
+	read var
+	if eq 12 $var
+	    echo sayı 12ye eşit
+	endif
+
+Etiket tanımlama
+++++++++++++++++
+**label** ifadesi ile kabuk betiğinde etiket tanımlanabilir. Daha sonra **goto** ifadesi kullanılarak bu etikete gitmek mümkündür. ymp kabuğunda döngüler bu şekilde sağlanır. Aşağıda siz 0 yazana kadar yazdığınızı ekrana yazan ymp kabuğu betiği mevcuttur.
+
+.. code-block:: shell
+
+	label test
+	read var
+	if eq $var 0
+	    exit
+	endif
+	echo $var
+	goto test
+
 
