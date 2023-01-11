@@ -14,9 +14,9 @@ pages:
     - pydefault 3.10
     - python3.10 -m ensurepip
     - pip3.10 install sphinx
-    - make html latexpdf
+    - make html
     - mkdir .public
-    - cp -r build/* .public
+    - cp -r build/html/* .public
     - mv .public public
   artifacts:
     paths:
