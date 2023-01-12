@@ -14,7 +14,7 @@ Bu dosyalar sayesinde ymp hangi kaynak kodun kullanılacağı, sürüm numarası
 ympbuild dosyası oluşturmak için **ymp template** komutundan yararlanabilirsiniz.
 Bu komut size şablon olarak ympbuild dosyası üretir. Bu sayede sadece üzerinde düzenleme yaparak kolayca paket yapabilirsiniz.
 
-Paket derleme
+Paket formatı
 ^^^^^^^^^^^^^
 Derleme talimatlarından kaynak ve ikili paketler üretmek için **ymp build** komutu kullanılır.
 Bu işlem önce kaynak kodu indirir ve doğrular. ardındar istenilen komutlara göre derleme işlemi yapıp paket üretir.
@@ -54,6 +54,9 @@ Bu işlem önce kaynak kodu indirir ve doğrular. ardındar istenilen komutlara 
 	}
 
 Burada paketin bilgileri ve nasıl derleneceğini tanımlayan işlevleri görebilirsiniz.
+
+Derleme işlemi ve sandbox
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Bir ympbuild dosyasını derlemek için aşağıdaki gibi bir komut kullanılmalıdır.
 
 .. code-block:: shell
@@ -70,6 +73,9 @@ Bu komut sandbox olmadan şu şekilde görünürdü.
 	$ ymp build ./repo/stuff-package/
 
 Burada sandbox zorunlu değildir fakat paketlerin düzgünce derlenmesi için kullanmanızı şiddetle öneririm.
+
+ympbuild
+^^^^^^^^
 
 Değişkenler
 +++++++++++
@@ -97,8 +103,8 @@ Diziler
 * **build** : Kodun derlendiği aşama burasıdır.
 * **package** : Kaynak kodun paketleme dizinine kurulduğu aşamadır.
 
-dizinler
-++++++++
+Derleme dizinleri
+^^^^^^^^^^^^^^^^^
 Her derlemenin **/tmp/ymp-build/<build-id>** içinde kendi derleme dizini vardır.
 build-id aslında ympbuild dosyasının md5sum'udur, bu nedenle ympbuild'i değiştirirseniz build-id değişir.
 Derleme dizini **HOME** çevresel değişkeni oarak tanımlanır. Bu sayede sadece **cd** komutunu kullanarak derleme dizinine geri dönebilirsiniz.

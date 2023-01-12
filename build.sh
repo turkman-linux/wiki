@@ -19,4 +19,4 @@ done
 make html
 find build/html -type f -iname *.html -exec sed -i "s/.*src=\".*\.js\".*//g" {} \;
 find build/html -type f -iname *.js -exec rm -rf {} \;
-rm -rf build/html/_static/css
+rm -rf build/html/_static/css build/html/{search,genindex}.html
