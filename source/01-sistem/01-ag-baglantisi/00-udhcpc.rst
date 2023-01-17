@@ -4,12 +4,19 @@ Busybox tarafından sağlanan dhcp client uygulamasıdır.
 
 Kullanımı aşağıdaki gibidir.
 
+Öncelikle ağ arayüzünü etkinleştirelim.
+
 .. code-block:: shell
+
 
 	# burada eth0 ağ arayüzü adıdır.
 	# ağ arayüzleri listesine /sys/class/net/ içerisinden ulaşabiliriniz.
-	$ udhcpc -i eth0 -s udhcpc.sh
+	$ ip link set eth0 up
+
+.. code-block:: shell
+
 	# -s ile belirtilen betiğin varsayılan konumu /usr/share/udhcpc/default.script
+	$ udhcpc -i eth0 -s udhcpc.sh
 
 udhcpc çalışırken bir betiğe ihtiyaç duyar. Bu betik sayesinde ağ bağlantısı kurulur.
 
