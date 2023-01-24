@@ -1,0 +1,68 @@
+Busybox ile Minimal Dağıtım Oluşturma
+=====================================
+Busybox tek bir ikili dosya olarak temel linux komutlarını içerisinde barındıran bir dosyadır.
+Bu dosya ve kernel olduğu zaman sistemimiz açılıçacak temel komutları kullabileceğimiz bir linux elde etmiş oluruz.
+
+İlk olarak busyboxu çalışma dizinimize kopyalayalım. Busyboxun static olarak derlenmiş olduğundan emin olalım.
+
+.. code-block:: shell
+
+	$ mkdir distro
+	$ cd distro
+	$ install /bin/busybox ./busybox
+	$ ldd ./busybox
+	-> özdevimli bir çalıştırılabilir değil
+
+Ardından initramfs için init dosyamızı aşağıdaki gibi oluşturalım.
+
+.. code-block:: shell
+
+	#!/busybox ash
+	PATH=/bin
+	/busybox mkdir /bin
+	/busybox --install -s /bin
+	exec /busybox ash
+
+initramfs dosyamızı paketleyelim.
+
+.. code-block:: shell
+
+	$ chmod +x init
+	$ find ./ | cpio -H newc -o > initrd.img
+	# isterseniz initrd.img sıkıştırabilirsiniz.
+	$ gzip -9 initrd.img
+
+Bu aşamada isterseniz initd.img dosyasını sıkıştırabilirsiniz.
+
+Sıra initrd.img ve kernelin birleştirilmesine geldi.
+Bunun için aşağıdaki gibi dizin yapısına dosyalarımızı kopyalayalım.
+vmlinuz dosyamızı kendi sistemimizdeki /boot içinden alabiliriz.
+
+.. code-block:: shell
+
+	iso/vmlinuz
+	iso/initrd.img
+	iso/boot/grub/grub.cfg
+
+Burada grub.cfg dosyamız bootloader komutlarını içerir. İçerisine aşağıdaki gibi olmalıdır.
+
+.. code-block:: shell
+
+	linux /vmlinuz
+	initrd /initrd.img
+	boot
+
+Son olarak iso dosyamızı paketleyelim.
+
+.. code-block:: shell
+
+	$ grub-mkrescue iso/ -o distro.iso
+
+Minimal sistemimiz hazır. Test etmek için qemu kullanabilirsiniz.
+
+.. code-block:: shell
+
+	$ qemu-system-x86_64 -cdrom distro.iso -m 1G
+
+Burada busybox yerine isterseniz static olarak derlenmiş herhangi bir C dosyasını kullanabilirsiniz.
+Yapmanız gereken init dosyası yerine bu dosyayı kullanmaktır.
