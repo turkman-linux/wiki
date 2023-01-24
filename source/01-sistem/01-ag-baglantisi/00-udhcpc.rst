@@ -39,7 +39,7 @@ Burada değişkenler şu şekildedir.
 
 OpenRC Servisi
 ^^^^^^^^^^^^^^^
-Sulix udhcpc için openrc servisi sağlar. Bu servisini etkinleştirmek için aşağıdaki komutu kullanabilirsiniz. Bu sayede sistem açıldığında ağ bağlantınız udhcpc ile kurulmuş olur.
+Turkman udhcpc için openrc servisi sağlar. Bu servisini etkinleştirmek için aşağıdaki komutu kullanabilirsiniz. Bu sayede sistem açıldığında ağ bağlantınız udhcpc ile kurulmuş olur.
 
 .. code-block:: shell
 

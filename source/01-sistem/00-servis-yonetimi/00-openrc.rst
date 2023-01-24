@@ -1,6 +1,6 @@
 OpenRC
 ======
-Sulix varsayılan olarak **openrc** kullanır.
+Turkman varsayılan olarak **openrc** kullanır.
 
 Kurulum
 ^^^^^^^

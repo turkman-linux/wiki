@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Sulix Wiki'
-copyright = 'Sulix Project 2023'
-author = 'sulix'
+project = 'Türkmen Wiki'
+copyright = 'Türkmen Linux 2023'
+author = 'turkman'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
