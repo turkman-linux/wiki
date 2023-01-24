@@ -22,11 +22,14 @@ language = 'tr'
 
 html_theme = 'alabaster'
 
+html_static_path = ['_static']
+
 html_theme_options = {
     'font_family' : 'monospace',
     'footnote_bg': 'none',
     'page_width': '100%',
     'body_max_width': 'auto',
+    'logo': 'logo.svg',
 
 }
 html_sidebars = {
