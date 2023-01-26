@@ -564,7 +564,6 @@ a:hover tt, a:hover code {
 
     div.documentwrapper {
         float: none;
-        background: #000;
     }
 
     div.sphinxsidebar {
@@ -573,22 +572,9 @@ a:hover tt, a:hover code {
         width: 102.5%;
         margin: 50px -30px -20px -30px;
         padding: 10px 20px;
-        background: #ccc;
-        color: #000;
     }
 
-    div.sphinxsidebar h3, div.sphinxsidebar h4, div.sphinxsidebar p,
-    div.sphinxsidebar h3 a {
-        color: #000;
-    }
 
-    div.sphinxsidebar a {
-        color: #555;
-    }
-
-    div.sphinxsidebar p.logo {
-        display: none;
-    }
 
     div.document {
         width: 100%;
