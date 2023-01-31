@@ -314,7 +314,7 @@ aside.sidebar {
     margin: 0 0 0.5em 1em;
     border: 1px solid #224;
     padding: 7px;
-    background-color: #001;
+    background-color: #3d3d3d;
     width: 40%;
     float: right;
     clear: right;
@@ -726,7 +726,7 @@ dl.glossary dt {
 }
 
 .footnote:target  {
-    background-color: #005;
+    background-color: #3d3d3d;
 }
 
 .line-block {

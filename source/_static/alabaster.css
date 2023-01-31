@@ -5,7 +5,7 @@
 body {
     font-family: monospace;
     font-size: 17px;
-    background-color: #000;
+    background-color: #3d3d3d;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -37,8 +37,8 @@ hr {
 }
 
 div.body {
-    background-color: #000;
-    color: #c1bcb6;
+    background-color: #3d3d3d;
+    color: #f7f7f7;
     padding: 0 30px 0 30px;
 }
 
@@ -70,13 +70,13 @@ div.relations {
 
 
 div.sphinxsidebar a {
-    color: #bbb;
+    color: #1aa3ff;
     text-decoration: none;
-    border-bottom: 1px dotted #666;
+    border-bottom: 1px dotted #034863;
 }
 
 div.sphinxsidebar a:hover {
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #25BDF8;
 }
 
 div.sphinxsidebarwrapper {
@@ -197,7 +197,7 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: monospace;
+    font-family: sans-serif;
     font-weight: normal;
     margin: 30px 0px 10px 0px;
     padding: 0;
