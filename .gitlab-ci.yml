@@ -9,7 +9,7 @@ pages:
   stage: deploy
   image: registry.gitlab.com/turkman/devel/assets/docker-images
   script: |
-    ymp repo --update
+    ymp repo --update --ignore-gpg
     ymp it make python3.10 python --no-emerge
     pydefault 3.10
     python3.10 -m ensurepip
