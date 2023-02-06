@@ -54,3 +54,19 @@ Sistemi kapatmak / yeniden başlatmak için **openrc-shutdown** komutunu kullana
 	# yeniden başlatmak için
 	$ openrc-shutdown -r 0
 
+Docker içinde servis çalıştırma
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Docker veya farklı bir ortamda sistem başlatılmadığı için servisler normal olarak çalıştırılmayacaktır. Fakat aşağıdaki adımları uygulayarak servis başlatmamız mümkündür.
+
+.. code-block:: shell
+
+	# Önce /run/openrc dizini oluşturulur
+	$ mkdir -p /run/openrc
+	# Ardından boş softlevel dosyası oluşturulur
+	$ touch /run/openrc/softlevel
+
+Bu işlemden sonra servis başlatmamız mümkün hale gelmektedir. Servisi aşağıdaki komut ile başlatabiliriz.
+
+	$ rc-service sshd start
+
+
