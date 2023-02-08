@@ -67,6 +67,8 @@ Docker veya farklı bir ortamda sistem başlatılmadığı için servisler norma
 
 Bu işlemden sonra servis başlatmamız mümkün hale gelmektedir. Servisi aşağıdaki komut ile başlatabiliriz.
 
+.. code-block:: shell
+
 	$ rc-service sshd start
 
 
