@@ -1,5 +1,5 @@
-Ymp Paket Sistemi
-=================
+Oturumlar
+=========
 .. toctree::
 	:glob:
 
