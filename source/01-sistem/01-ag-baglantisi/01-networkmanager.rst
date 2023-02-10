@@ -47,6 +47,6 @@ Eğer **-d** parametresi ile başlatırsanız servis hata ayıklama modunda baş
 	$ mkdir -p /var/run/dbus
 	$ dbus-daemon --system &
 	# servisi başlatma
-	# NetworkManager
+	$ NetworkManager
 
 
