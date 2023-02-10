@@ -33,7 +33,7 @@ Bu işlem önce kaynak kodu indirir ve doğrular. ardındar istenilen komutlara 
 	maintainer='linuxuser'
 	depends=(foo bar)
 	source=("https://example.org/source.zip"
-	    "some-stuff.patch"
+	        "some-stuff.patch"
 	)
 	arch=(x86_64 aarch64)
 	md5sums=('bb91a17fd6c9032c26d0b2b78b50aff5'
@@ -41,13 +41,13 @@ Bu işlem önce kaynak kodu indirir ve doğrular. ardındar istenilen komutlara 
 	)
 	license=('GplV3')
 	prepare(){
-		 ...
+	    ...
 	}
 	setup(){
-		...
+	    ...
 	}
 	build(){
-    ...
+	    ...
 	}
 	package(){
 	   ...
