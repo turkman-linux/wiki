@@ -29,6 +29,8 @@ Bunun için **pydefault** komutu kullanarak varsayılan sürümü değiştirebil
 
 **Not:** python paketi kurulurken var olan en üst sürümü varsayılan olarak ayarlamaktadır.
 
+**Not:** En üst sürümü kullanmamak sistemin ve uygulamaların düzgün çalışmamasına sebep olabilir.
+
 Pip etkinleştirilmesi
 ^^^^^^^^^^^^^^^^^^^^^
 pip komutunu etkinleştirmek için aşağıdaki komutu kullanın.
