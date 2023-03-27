@@ -1,3 +1,4 @@
+.. _elogind:
 Elogind
 =======
 **elogind** systemd projesinde bulunan **logind** uygulamasının bağımsız çalışabilen halinin halidir.
