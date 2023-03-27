@@ -1,0 +1,46 @@
+C
+====
+C en temel programlama dillerinden biridir. C derlemeli bir dil olduğu için **gcc** veya **clang** gibi bir derleyiciye ihtiyaç duyar.
+
+Derleyici kurulumu
+^^^^^^^^^^^^^^^^^^
+Gcc kurulumu
+++++++++++++
+gcc yüklemek için **ymp install gcc** komutunu kullanabilirsiniz.
+
+.. code-block:: shell
+
+	$ ymp install gcc
+
+Clang kurulumu
+++++++++++++++
+clang yüklemek için **ymp install clang** komutunu kullanabilirsiniz.
+
+.. code-block:: shell
+
+	$ ymp install clang
+
+Musl
+^^^^
+**Musl** lib C kütüphanesidir ve sistemde varsayılman bulunan **glibc** alternatifidir. Musl daha hafiftir fakat dağıtımların geneli glibc kullandığı ve her kaynak kodun düzgün şekilde derlenememesinden dolayı Türkmen linuxta C kütüphanesi olarak glibc tercih edilmiştir.
+
+Yide de musl kullanarak derleme yapılabilmektedir. Bunun için **ymp install musl** komutu ile musl yükleyip sonrasında **musl-gcc** ile derleme yapabilirsiniz.
+
+.. code-block:: shell
+
+	$ ymp install musl
+
+**Not:** tüm sistem kütüphaneleri glibc uyumlu çalıştığı için musl kullanarak yapacağınız derlemelerde sistem kütüphanelerinden yararlanamazsınız.
+
+Derleyici ayarlama
+^^^^^^^^^^^^^^^^^^
+ymp varsayılan olarak **gcc** kullanır. Bunu **/etc/ymp.yaml** içerisinden değiştirebilirsiniz veya **--build:cc=xxx** şeklinde ayarlayabilirsiniz.
+
+Paket yapımı dışında genellikle **CC** çevresel değişkeni kullanılarak derleyici ayarlanabilir.
+
+.. code-block:: shell
+
+	$ export CC=musl-gcc
+	$ make
+
+
