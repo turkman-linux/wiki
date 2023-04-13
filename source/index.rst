@@ -2,6 +2,8 @@ Türkmen Wikiye Hoşgeldiniz
 ========================
 Bu wikiye katkı sağlamak için https://gitlab.com/turkman/devel/doc/wiki/ adresine pull request gönderebilirsiniz.
 
+Bu dokümana https://turkman.gitlab.io/devel/doc/wiki/rst2pdf.pdf adresinden çevirimdışı pdf formatında da erişebilirsiniz.
+
 Giriş:
 ^^^^^^
 Türkmen Linux bağımsız tabanlı bir GNU/Linux dağıtımıdır. Kendisine ait YMP (Yerli ve Milli Paket) sistemini kullanır.
