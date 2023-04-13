@@ -9,13 +9,21 @@ pages:
   stage: deploy
   image: registry.gitlab.com/turkman/devel/assets/docker-images
   script: |
+    # install dependencies
     ymp repo --update --ignore-gpg
-    ymp it make python3.10 python --no-emerge
+    ymp it make python3.10 python fontconfig --no-emerge
     pydefault 3.10
     python3.10 -m ensurepip
     pip3.10 install sphinx
+    # install font
+    wget https://github.com/dejavu-fonts/dejavu-fonts/releases/download/version_2_37/dejavu-fonts-ttf-2.37.zip -O font.zip
+    unzip font.zip
+    mv dejavu-*/ttf /usr/share/fonts/
+    fc-cache -f
+    # build
     sh build.sh
     mkdir .public
+    cp -r build/pdf/* .public
     cp -r build/html/* .public
     mv .public public
   artifacts:
