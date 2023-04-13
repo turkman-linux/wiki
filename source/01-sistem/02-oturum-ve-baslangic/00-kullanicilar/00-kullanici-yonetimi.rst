@@ -19,7 +19,7 @@ Bu uid değerleri **/etc/passwd** dosyası içerisinde bulunur.
 	# /home/pingu : kullanıcı ev dizini
 	# /bin/bash : kullanıcı kabuğu
 
-**Not:** Turkman diğer dağıtımlardan farklı olarak **/home** yerine **/data/user** dizini kullanır.
+**Not:** Türkmen diğer dağıtımlardan farklı olarak **/home** yerine **/data/user** dizini kullanır.
 Bu yüzden kullancı ev dizinini uygun olarak ayarlamanız gerekir.
 
 Kullanıcı ekleme ve silme
@@ -48,7 +48,7 @@ Yeni kullanıcı eklemek için **useradd** veya **adduser** komutu kullanılır.
 
 Sysconf yardımı ile kullanıcı ekleme
 ************************************
-Turkman içerisinde **/etc/passwd.d** dizini bulunur.
+Türkmen içerisinde **/etc/passwd.d** dizini bulunur.
 Bu dizin sayesinde paketler kurulurken kullanıcı eklemek mümkün olur.
 Bunun için **/etc/passwd.d/paketadı** dosyası oluşturup içerisine passwd dosyasına eklenmesi gereken satırlar yazılabilir.
 Bu sayede paket kurulurken sysconf bu dosyayı algılayarak kullanıcıyı otomatik olarak sisteme dahil eder.

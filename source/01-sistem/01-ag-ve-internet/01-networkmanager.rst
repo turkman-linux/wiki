@@ -25,7 +25,7 @@ Kaynak koddan derlemek için aşağıdaki işlemleri uygulayabilirsiniz.
 
 Openrc servisi
 ^^^^^^^^^^^^^^
-Turkman networkmanager için openrc servisi sağlar.
+Türkmen networkmanager için openrc servisi sağlar.
 Bu sayede ağ bağlantısı sistem açıldığında otomatik olarak yapılmış olur.
 Servisi aşağıdaki gibi etkinleştirebiliriz.
 

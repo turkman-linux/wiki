@@ -1,6 +1,6 @@
 OpenRC
 ======
-Turkman varsayılan olarak **openrc** kullanır.
+Türkmen varsayılan olarak **openrc** kullanır.
 
 Kurulum
 ^^^^^^^

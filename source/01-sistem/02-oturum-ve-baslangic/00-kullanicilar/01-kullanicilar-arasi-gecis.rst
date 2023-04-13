@@ -77,7 +77,7 @@ Dosya sisteminde **suid** iznini engellemek için **nosuid** seçeneği etkinle�
 
 busybox su
 ^^^^^^^^^^
-Busybox bize **su** komutu sağlayabilmektedir. Bu komutu kullanmak için öncelikle busyboxun kopyası oluşturulmalı ve ona **suid** yetkisi verilmelidir. TurkMan varsayılan su komutu olarak busyboxu kullanmaktadır.
+Busybox bize **su** komutu sağlayabilmektedir. Bu komutu kullanmak için öncelikle busyboxun kopyası oluşturulmalı ve ona **suid** yetkisi verilmelidir. Türkmen varsayılan su komutu olarak busyboxu kullanmaktadır.
 
 .. code-block:: shell
 
