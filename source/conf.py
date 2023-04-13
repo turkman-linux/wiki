@@ -13,8 +13,16 @@ author = 'turkman'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
-
+extensions = ['sphinx.ext.autodoc', 'rst2pdf.pdfbuilder']
+pdf_documents = [('index', u'rst2pdf', u'Türkmen Dokümanı', u'Türkmen Linux'),]
+pdf_stylesheets = ['style-main.yaml', 'tango']
+pdf_font_path = ['/usr/share/fonts', '/usr/share/texmf-dist/fonts/']
+pdf_style_path = [ '.', 'source/_static']
+pdf_use_coverpage = False
+pdf_use_toc = True
+pdf_default_dpi = 96
+pdf_compressed = True
+pdf_language = "tr_TR"
 language = 'tr'
 
 # -- Options for HTML output -------------------------------------------------
