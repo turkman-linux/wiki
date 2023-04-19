@@ -2,7 +2,7 @@
 Fuse
 ====
 Fuse kullanıcıların root erişimi olmadan disk bağlayabilmelerine imkan tanır.
-Örneğin bir çıkarılabilir ayğıt takıldığında içeriğine erişmek için fuse kullanılabilir.
+Örneğin bir çıkarılabilir aygıt takıldığında içeriğine erişmek için fuse kullanılabilir.
 
 Kurulumu
 ^^^^^^^^

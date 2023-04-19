@@ -25,5 +25,24 @@ Daha sonra dosyayı komut çalıştırır gibi çalıştırabilirsiniz.
 
 AppImage dosyalarını uygulama menüsüne eklemek
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Bunun için https://github.com/TheAssassin/AppImageLauncher adresinden **AppImage Launcher** kullanabilirsiniz.
+Bunun appimage dosyamısa **--appimage-extract** parametresi vererek içini açalım.
+Bize **squashfs-root** dizini oluşturulacaktır.
+Bu dizini istediğimiz bir yere kopyalayıp aşağıdaki gibi bir uygulama başlatıcısı hazırlayalım.
+Bu başlatıcıyı ~/.local/share/applications dizinine koyalım.
 
+.. code-block:: shell
+
+
+	[Desktop Entry]
+	Version=1.0
+	Name=Firefox
+	Comment=Web Browser
+	Exec=/data/user/pingu/firefox/firefox %u
+	Icon=/data/user/pingu/firefox/icon.png
+	Terminal=false
+	Type=Application
+	MimeType=text/html;
+	Categories=Network;WebBrowser;
+
+Burada MimeType kısmına belirtilen dosyalar birlikte aç menüsünde gözükmesini sağlar.
+Bir dosyanın mimetype adına **file --mime dosya** komutu ile ulaşabilirsiniz.
