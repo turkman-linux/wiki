@@ -7,7 +7,7 @@ project = 'Türkmen Wiki'
 copyright = 'Türkmen Linux 2023'
 author = 'turkman'
 language = 'tr'
-extensions = ['sphinx.ext.autodoc', 'rst2pdf.pdfbuilder']
+extensions = ['sphinx.ext.autodoc', 'rst2pdf.pdfbuilder', 'sphinx_sitemap']
 
 # -- Options for PDF output --
 
@@ -24,6 +24,7 @@ pdf_fit_mode = "shrink"
 
 # -- Options for HTML output --
 
+html_baseurl = 'https://turkman.gitlab.io/devel/doc/wiki/'
 html_theme = 'alabaster'
 html_static_path = ['_static']
 html_theme_options = {

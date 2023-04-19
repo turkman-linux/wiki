@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://turkman.gitlab.io/devel/doc/wiki/sitemap.xml
