@@ -1,0 +1,51 @@
+ext4
+====
+**Ext4** standart dosya sistemdir ve çoğu linux dağıtımında varsayılan olarak tercih edilir.
+
+Diski bağlama
+^^^^^^^^^^^^^
+ext4 diskleri bağlamak için öncelikle ext4 çekirdek modülünün etkin olması gerekmektedir.
+**lsmod | grep ext4** komutunu kullanarak etkın olup olmadığını öğrenebilirsiniz.
+
+.. code-block:: shell
+
+	$ lsmod | grep ext4
+
+Daha sonra aşağıdakı komut yardımı ile diski bağlayabiliriz.
+
+.. code-block:: shell
+
+	# diski yazılabılır şekilde bağlamak için rw salt okunur bağlamak için ro kullanılır.
+	$ mount -t ext4 -o defaults,rw /dev/sda1 /baglama/noktasi
+
+Ext4 biçimlendirme
+^^^^^^^^^^^^^^^^^^
+**mkfs.ext4** komutu e2fsprogs paketi ile sağlanır. Öncelikle e2fsprogs yükleyelim.
+
+.. code-block:: shell
+
+	$ ymp install e2fsprogs
+
+Daha donra diski biçimlendirelim.
+
+.. code-block:: shell
+
+	$ mkfs.ext4 /dev/sda1
+
+**Not:** diski biçimlendirmek verileriniza kalıca hasar verebilir.
+
+Günlüklemeyi kapatma
+^^^^^^^^^^^^^^^^^^^^
+Ext4 dosya istemi günlükleme özelliğine sahiptir.
+Bu özelliği aşağıdaki gibi kapatabilirsiniz.
+
+.. code-block:: shell
+
+	$ tune2fs -O ^has_journal /dev/sda1
+
+Eğer disk biçimlendirirken kapatmak isterseniz aşağıdaki gibi komut kullanabilirsiniz.
+
+.. code-block:: shell
+
+	$ mkfs.ext4 -O ^has_journal /dev/sda1
+
