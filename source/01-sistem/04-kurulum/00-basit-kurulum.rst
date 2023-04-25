@@ -5,20 +5,20 @@ Anlatım boyunca **/dev/sda** diski üzerinden örnekleme yapılmıştır. Siz k
 
 Uefi - Legacy tespiti
 ^^^^^^^^^^^^^^^^^^^^^
-`/sys/firmware/efi` dizini varsa uefi yoksa legacy sisteme sahipsinizdir.
-Eğer uefi ise ia32 veya x86_64 olup olmadığını anlamak için `/sys/firmware/efi/fw_platform_size` içeriğine bakın.
+**/sys/firmware/efi** dizini varsa uefi yoksa legacy sisteme sahipsinizdir.
+Eğer uefi ise ia32 veya x86_64 olup olmadığını anlamak için **/sys/firmware/efi/fw_platform_size** içeriğine bakın.
 
 .. code-block:: shell
 
 	[[ -d /sys/firmware/efi/ ]] && echo UEFI || echo Legacy
-  [[ "64" == $(cat/sys/firmware/efi/fw_platform_size) ]] && echo x86_64 || ia32
+	[[ "64" == $(cat/sys/firmware/efi/fw_platform_size) ]] && echo x86_64 || ia32
 
 Disk Bölümlendirme
 ^^^^^^^^^^^^^^^^^^
 Uefi kullananlar ayrı bir disk bölümüne ihtiyaç duyarlar.
 Bu bölümü **fat32** olarak bölümlendirmeliler.
 
-Bu anlatımda kurulum için `/boot` dizinini ayırmayı ve efi bölümü olarak aynı diski kullanmayı tercih edeceğiz.
+Bu anlatımda kurulum için **/boot** dizinini ayırmayı ve efi bölümü olarak aynı diski kullanmayı tercih edeceğiz.
 
 Öncelikle **cfdisk** veya **fdisk** komutları ile diski bölümlendirelim.
 
@@ -35,7 +35,7 @@ Ardından boot bölümünü ve kök dizini formatlayalım.
 
 **Not:** ext4 dosya sistemi araçları **e2fsprogs** ile sağlanır.
 
-Eğer /boot bölümünü ayırmayacaksanız grub yüklenirken `unknown filesystem` hatası almanız durumunda aşağıdaki yöntemi kullanabilirsiniz.
+Eğer /boot bölümünü ayırmayacaksanız grub yüklenirken **unknown filesystem** hatası almanız durumunda aşağıdaki yöntemi kullanabilirsiniz.
 
 .. code-block:: shell
 
@@ -78,7 +78,7 @@ Daha sonra diski senkronize edelim.
 
 Bootloader kurulumu
 ^^^^^^^^^^^^^^^^^^^
-Sisteme `ymp chroot` komutu ile girelim.
+Sisteme **ymp chroot** komutu ile girelim.
 
 .. code-block:: shell
 
@@ -102,6 +102,8 @@ Grub paketini yükleyelim.
 	$ ymp install grub
 
 Son olarak grub kurulumu yapalım.
+
+.. code-block:: shell
 
 	# biz /boot ayırdığımız ve efi bölümü olarak kullanacağız.
 	# uefi kullanmayanlar --efi-directory belirtmemeliler.
@@ -147,6 +149,6 @@ Aşağıdakine uygun olarak doldurun.
 	/dev/sda1	/boot	vfat	defaults,rw	0	1
 	/dev/sda2	/	ext4	defaults,rw	0	1
 
-**Not:** Disk bölümü konumu yerine `UUID="<uuid-değeri>"`şeklinde yazmanızı öneririm.
+**Not:** Disk bölümü konumu yerine **UUID="<uuid-değeri>"** şeklinde yazmanızı öneririm.
 Bölüm adları değişebilirken uuid değerleri değişmez.
 
