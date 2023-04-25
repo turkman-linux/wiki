@@ -141,7 +141,7 @@ Ayrıca otomatik yapılandırma da oluşturabiliriz.
 Fstab dosyası
 ^^^^^^^^^^^^^
 Bu dosyayı doldurarak açılışta hangi disklerin bağlanacağını ayarlamalıyız.
-Aşağıdakine uygun olarak doldurun.
+**/etc/fstab** dosyasını aşağıdakine uygun olarak doldurun.
 
 .. code-block:: shell
 
