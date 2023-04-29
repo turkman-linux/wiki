@@ -1,4 +1,4 @@
-.. _linux-firmware
+.. _linux-firmware:
 Linux Firmware
 ==============
 **linux-firmware** linux çekirdeği ile gelmeyen sürücüleri içerir.

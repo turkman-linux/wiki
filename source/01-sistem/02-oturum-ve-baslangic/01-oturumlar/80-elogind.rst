@@ -58,3 +58,38 @@ Bu komut aşağıdaki gibi çıktı verir.
 	1 sessions listed.
 
 
+Oturumu kontrolü
+^^^^^^^^^^^^^^^^
+Oturumu kapatmak için:
+
+.. code-block:: shell
+
+	$ loginctl terminate-session <session-id>
+
+Ekranı kilitlemek için:
+
+.. code-block:: shell
+
+	$ loginctl lock-session <session-id>
+
+Sistem kontrolü
+^^^^^^^^^^^^^^^
+Sistemi kapatmak için:
+
+.. code-block:: shell
+
+	$ loginctl poweroff
+
+Sistemi yeniden başlatmak için
+
+.. code-block:: shell
+
+	$ loginctl reboot
+
+Sistemi uyku moduna almak için
+
+.. code-block:: shell
+
+	$ loginctl suspend
+
+**Not:* Uyku modu bazı donanımlarda düzgün çalışmayabilir.
