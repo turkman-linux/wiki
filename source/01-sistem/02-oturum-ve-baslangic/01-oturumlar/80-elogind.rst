@@ -92,4 +92,4 @@ Sistemi uyku moduna almak için
 
 	$ loginctl suspend
 
-**Not:* Uyku modu bazı donanımlarda düzgün çalışmayabilir.
+**Not:** Uyku modu bazı donanımlarda düzgün çalışmayabilir.
