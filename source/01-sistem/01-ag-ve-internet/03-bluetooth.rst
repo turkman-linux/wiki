@@ -1,8 +1,11 @@
 Bluetooth
 =========
+Bluetooth bağlantısı sağlamak için bluez kullanılır.
+Ayrıca buletooth kartının sürücüsü için :ref:`linux-firmware<linux-firmware>` gerekmektedir.
+
 Kurulum
 ^^^^^^^
-Bluetooth aygıtına bağlanmak için öncelikle **bluez** gerekmektedir. ymp ile bluez kurulumu yapalım.
+Öncelikle **bluez** kurulumu yapalım.
 
 .. code-block:: shell
 

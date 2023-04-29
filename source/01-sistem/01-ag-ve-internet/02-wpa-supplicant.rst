@@ -1,7 +1,7 @@
 Wifi
 ====
 Wifi bağlantısı sağlamak için wpa-supplicant kullanılır.
-Ayrıca wifi kartının sürücüsü için linux-firmware gerekmektedir.
+Ayrıca wifi kartının sürücüsü için :ref:`linux-firmware<linux-firmware>` gerekmektedir.
 
 Wpa-supplicant kurulumu
 ^^^^^^^^^^^^^^^^^^^^^^^
