@@ -1,7 +1,7 @@
 # install dependencies
 set -ex
 ymp repo --update --ignore-gpg
-ymp it make python3.11 python fontconfig --no-emerge
+ymp it make python3.11 python fontconfig py3-cairo --no-emerge
 pydefault 3.11
 python3.11 -m ensurepip
 pip3.11 install sphinx
