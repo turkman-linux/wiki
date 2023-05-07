@@ -1,4 +1,5 @@
 # install dependencies
+set -ex
 ymp repo --update --ignore-gpg
 ymp it make python3.11 python fontconfig --no-emerge
 pydefault 3.11
