@@ -9,7 +9,7 @@ Sistem dilini ayarlamak için öncelikle **/etc/locale.gen** dosyamızı aşağ�
 
 	tr_TR.UTF-8 UTF-8
 
-**Not:** An altta boş bir satır bulunmalıdır.
+**Not:** En altta boş bir satır bulunmalıdır.
 
 Ardından /lib64/locale dizini yoksa oluşturalım.
 
