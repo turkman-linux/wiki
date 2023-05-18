@@ -26,7 +26,8 @@ Ardından /lib64/locale dizini yoksa oluşturalım.
 	export LANG="tr_TR.UTF-8"
 	export LC_ALL="tr_TR.UTF-8"
 
-**Not:** Türkçe büyük küçük harf dönüşümü (i -> İ ve ı -> I) ascii standartına uyumsuz olduğu için **LC_ALL** kısmını türkçe ayarlamayı önermiyoruz. bunun yerine **C.UTF-8** veya **en_US.UTF-8** olarak ayarlayabilirsiniz.
+**Not:** Türkçe büyük küçük harf dönüşümü (i -> İ ve ı -> I) ascii standartına uyumsuz olduğu için **LC_ALL** kısmını türkçe ayarlamayı önermiyoruz.
+Bunun yerine **C.UTF-8** veya **en_US.UTF-8** olarak ayarlayabilirsiniz.
 
 Son olarak **locale-gen** komutunu çalıştıralım.
 
