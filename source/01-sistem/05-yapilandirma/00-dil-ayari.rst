@@ -2,9 +2,11 @@ Dil ayarlama
 ============
 Sistem dilini ayarlamak için öncelikle **/etc/locale.gen** dosyamızı aşağıdaki gibi düzenleyelim.
 
+* Dil kodlarına **/usr/share/i18n/locales** içerisinden ulaşabilirsiniz.
+* Karakter kodlamalara **/usr/share/i18n/charmaps** içinden ulaşabilirsiniz.
+
 .. code-block:: shell
 
-	...
 	tr_TR.UTF-8 UTF-8
 
 **Not:** An altta boş bir satır bulunmalıdır.
@@ -24,7 +26,7 @@ Ardından /lib64/locale dizini yoksa oluşturalım.
 	export LANG="tr_TR.UTF-8"
 	export LC_ALL="tr_TR.UTF-8"
 
-**Not:** Türkçe büyük küçük harf dönüşümü (i -> İ ve ı -> I) asii standartına uyumsuz olduğu için **LC_ALL** kısmını türkçe ayarlamayı önermiyoruz. bunun yerine **C.UTF-8** veya **en_US.UTF-8** olarak ayarlayabilirsiniz.
+**Not:** Türkçe büyük küçük harf dönüşümü (i -> İ ve ı -> I) ascii standartına uyumsuz olduğu için **LC_ALL** kısmını türkçe ayarlamayı önermiyoruz. bunun yerine **C.UTF-8** veya **en_US.UTF-8** olarak ayarlayabilirsiniz.
 
 Son olarak **locale-gen** komutunu çalıştıralım.
 
