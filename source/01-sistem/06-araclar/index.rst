@@ -1,5 +1,5 @@
-Yapılandırma
-============
+Araçlar
+=======
 .. toctree::
 	:glob:
 
