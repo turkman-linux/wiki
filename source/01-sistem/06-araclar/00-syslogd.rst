@@ -46,6 +46,7 @@ Log yazma
 	$ logger "hello world"
 
 bununla birlikte aşağıdaki C kodunu kullanarak log yazmak mümkündür.
+
 .. code-block:: C
 
 	#include <syslog.h>
