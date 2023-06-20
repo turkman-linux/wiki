@@ -7,7 +7,8 @@ project = 'Türkmen Wiki'
 copyright = 'Türkmen Linux 2023'
 author = 'turkman'
 language = 'tr'
-extensions = ['sphinx.ext.autodoc', 'rst2pdf.pdfbuilder', 'sphinx_sitemap']
+extensions = ['sphinx.ext.autodoc', 'rst2pdf.pdfbuilder']
+smartquotes = False
 
 # -- Options for PDF output --
 
