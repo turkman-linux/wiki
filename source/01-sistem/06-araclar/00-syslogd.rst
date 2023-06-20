@@ -11,7 +11,7 @@ Bu loglar /var/log/messages içerisinde bulunur. Bu sayede sistemle ilgili tüm 
 
 Servisin başlatılması
 ^^^^^^^^^^^^^^^^^^^^^
-**syslogd** komutunu kullanarak servisi başlatabilirsiniz. Bu komut busybox tarafından sağlanır.
+`syslogd` komutunu kullanarak servisi başlatabilirsiniz. Bu komut busybox tarafından sağlanır.
 
 .. code-block:: shell
 
@@ -39,7 +39,7 @@ Eğer isterseniz aşağıdaki gibi bir openrc servisi yazıp kullanabilirsiniz.
 
 Log yazma
 ^^^^^^^^^
-*logger** komutunu kullanarak log yazdırabilirsiniz.
+`logger` komutunu kullanarak log yazdırabilirsiniz.
 
 .. code-block:: shell
 
