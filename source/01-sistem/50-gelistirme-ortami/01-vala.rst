@@ -2,6 +2,7 @@ Vala
 ====
 Vala yazılan kaynak kodu **C** koduna çevirip daha sonra derleyerek çalışan bir programlama dilidir.
 **valac** kullanılarak derlenir.
+
 Valac kurulumu
 ^^^^^^^^^^^^^^
 Vala derleyicisini (valac) yüklemek için **ymp install vala** komutunu kullanabilirsiniz.
