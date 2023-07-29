@@ -12,6 +12,10 @@ Türkmen Linux Türkiye originli bir dağıtımdır. 🇹🇷 Geliştirilme sebe
 * Bütün paketler header dosyaları ve static kütüphaneler ile beraber gelmektedir. Bu sayede derleme yapması diğer dağıtımlardan daha kolaydır.
 * Hızla çalışan karışık (ikili ve kaynak) paket sistemine sahiptir. İsteyenler kaynak koddan paket kurarken isteyenler derlenmiş paketleri kullanrabilirler.
 
+Logonun anlamı
+^^^^^^^^^^^^^^
+Türkmen linuxun logosu mavi zemin üzerine 3 hilalden oluşmaktadır. Logodaki 3 hilal osmanlı döneminde (1517-1793 arasında) kullanılan bayraktan esinlenilmiştir. Mavi renk (#1aa3ff) ise türkmen mavisidir.
+
 Kaynak kod yansılarımız:
 
 * https://github.com/turkman-linux
