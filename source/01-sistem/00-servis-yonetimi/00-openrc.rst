@@ -71,4 +71,41 @@ Bu işlemden sonra servis başlatmamız mümkün hale gelmektedir. Servisi aşa�
 
 	$ rc-service sshd start
 
+Servis dosyası
+^^^^^^^^^^^^^^
+Openrc servis dosyaları basit birer **bash** betiğidir. Bu betikler **openrc-run** komutu ile çalıştırılır ve çeşitli fonksiyonlardan oluşabilir. Servis dosyaları **/etc/init.d** içerisinde bulunur. Servisleri ayarlamak için ise **/etc/conf.d** içerisine aynı isimle ayar dosyası oluşturabiliriz.
+
+Çalıştırılacak komut komut parametreleri ve **pidfile** dosyamızı aşağıdaki gibi belirtebiliriz.
+
+.. code-block:: shell
+
+	description="Ornek servis"
+	command=/usr/bin/ornek-servis
+	command_args=--parametre
+	pidfile=/run/ornek-servis.pid
+
+Bununla birlikte **start**, **stop**, **status**, **reload**, **start_pre**, **stop_pre** gibi fonksiyonlar da yazabiliriz.
+
+.. code-block:: shell
+
+	...
+	start(){
+	    ebegin "Starting ${RC_SVCNAME}"
+	    start-stop-daemon --start --pidfile "/run/servis.pid" --exec /usr/bin/ornek-servis --parametre
+	}
+	...
+
+Servis bağımlılıklarını belirtmek için ise **depend** fonksiyonu kullanılır.
+
+.. code-block:: shell
+
+	...
+	depend() {
+	  need localmount
+	  after dbus
+	}
+	...
+
+Openrc teorik olarak sysv-init betiklerini de çalıştırabilir. Fakat kesinlikle tavsiye edilmemektedir.
+
 
