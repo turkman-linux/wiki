@@ -14,8 +14,8 @@ Programlama
 	*-dersi
 
 EOF
-for sayfa in bash-dersi vala-dersi python-dersi makefile-dersi git-kullanimi docker-kullanimi ; do
-    curl https://gitlab.com/sulincix/sayfalar/-/raw/master/rst/$sayfa.rst > source/99-kodlama/$sayfa-dersi.rst
+for sayfa in c-dersi bash-dersi vala-dersi python-dersi makefile-dersi git-kullanimi docker-kullanimi ; do
+    curl https://gitlab.com/sulincix/sayfalar/-/raw/master/rst/$sayfa.rst > source/99-kodlama/$sayfa.rst
 done
 make html pdf
 find build/html -type f -iname *.html -exec sed -i "s/.*src=\".*\.js\".*//g" {} \;
