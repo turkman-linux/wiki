@@ -19,6 +19,4 @@ Türkmen linuxun logosu mavi zemin üzerine 3 hilalden oluşmaktadır. Logodaki 
 Kaynak kod yansılarımız:
 
 * https://github.com/turkman-linux
-
 * https://gitlab.com/turkman
-

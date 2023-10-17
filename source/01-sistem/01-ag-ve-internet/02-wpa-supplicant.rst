@@ -88,4 +88,3 @@ Ardından wifi ağına bağlanalım.
 	$ nmcli device wifi connect "SSID" --ask
 	# Parolayı doğrudan komuta ekleyebilirsiniz
 	$ nmcli device wifi connect "@" password "password"
-

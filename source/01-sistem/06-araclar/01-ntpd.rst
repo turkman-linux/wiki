@@ -64,12 +64,10 @@ Bu servis dosyasını **/etc/init.d/ntpd** dosyasına kaydettikten sonra aşağ�
 
 Yapılandırma dosyası
 ^^^^^^^^^^^^^^^^^^^^
-Yapılandırma dosyası **/etc.ntp.conf** konumundadır. Örnek yapılandırma aşağıdaki gibidir.
+Yapılandırma dosyası **/etc/ntp.conf** konumundadır. Örnek yapılandırma aşağıdaki gibidir.
 
 .. code-block:: shell
 
 	server 0.pool.ntp.org
 	server 1.pool.ntp.org
 	server 2.pool.ntp.org
-
-

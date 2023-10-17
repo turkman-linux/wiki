@@ -60,4 +60,3 @@ bununla birlikte aşağıdaki C kodunu kullanarak log yazmak mümkündür.
 	}
 
 Not: **/dev/log** konumundaki unix sockete bağlanıp log yollamayı oradan da yapabilirsiniz.
-
