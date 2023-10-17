@@ -20,11 +20,30 @@ clang yüklemek için **ymp install clang** komutunu kullanabilirsiniz.
 
 	$ ymp install clang
 
-Musl
-^^^^
-**Musl** lib C kütüphanesidir ve sistemde varsayılman bulunan **glibc** alternatifidir. Musl daha hafiftir fakat dağıtımların geneli glibc kullandığı ve her kaynak kodun düzgün şekilde derlenememesinden dolayı Türkmen linuxta C kütüphanesi olarak glibc tercih edilmiştir.
+Standart C Kütüphanesi (libc)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Her GNU/Linux dağıtımı bir libc ile gelir. libc, sistemdeki en temel
+kütüphanedir ve bütün programlar ne ile yazılmış olursa olsun eninde sonunda bir
+yerlerde libc fonksiyonlarını çağırır. libc fonksiyonlarını kullanmadan program
+yazmak çok zordur. İşte Türkmen Linux'ta kurulabilen libc implementasyonları:
 
-Yide de musl kullanarak derleme yapılabilmektedir. Bunun için **ymp install musl** komutu ile musl yükleyip sonrasında **musl-gcc** ile derleme yapabilirsiniz.
+Glibc
++++++
+**Glibc** GNU tarafından geliştirilen ve bakımı yapılan bir libc
+implementasyonudur ve neredeyse her dağıtım tarafından varsayılan olarak
+kullanılmaktadır. Türkmen linux için kurmanıza gerek yok çünkü zaten varsayılan
+olarak gelir ve sistemin çalışması için önemli olduğu için kaldırmaya çalışmanız
+da pek önerilmez.
+
+Herhangi bir C programını gcc veya clang ile derlediğinizde neredeyse her
+dağıtımda varsayılan olarak glibc kullanır. Dolayısıyla kullanmak için özel bir
+çaba sarf etmenize gerek yok.
+
+Musl
+++++
+**Musl**, sistemde varsayılan olarak bulunan **glibc** alternatifidir. Musl daha hafiftir fakat dağıtımların geneli glibc kullandığı ve her kaynak kodun düzgün şekilde derlenememesinden dolayı Türkmen linuxta C kütüphanesi olarak glibc tercih edilmiştir.
+
+Yine de musl kullanarak derleme yapılabilmektedir. Bunun için **ymp install musl** komutu ile musl yükleyip sonrasında **musl-gcc** ile derleme yapabilirsiniz.
 
 .. code-block:: shell
 
@@ -42,5 +61,4 @@ Paket yapımı dışında genellikle **CC** çevresel değişkeni kullanılarak 
 
 	$ export CC=musl-gcc
 	$ make
-
 

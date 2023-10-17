@@ -28,4 +28,3 @@ Ardından **seatd** ve **devfs** servislerini etkinleştirmelisiniz.
 Service açmadıysanız **seatd-launch weston** komutu kullanabilirsiniz.
 
 Not: X11 içerisinde weston çalıştırırsanız weston pence modunda çalıştırılacaktır. Bu sayede X11 üzerinde weston uygulamalarını test etebilirsiniz.
-

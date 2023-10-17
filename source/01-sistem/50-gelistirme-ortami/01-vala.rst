@@ -25,7 +25,7 @@ Kaynak koddan derlemek için ise aşağıdaki adımları takip ediniz:
 
 Nano renklendirme desteği
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-Kaynak kod yazmak için nano kullanabilirsiniz. Nanoda renklendirme için valaya destek bulunmamaktadır. Vala ile **java** ve **c#** progmarmala dillerinin renklendirmesi birbirine benzer olduğu için kopyasını kullanarak vala yazarken renklendirme yapabilirsiniz.
+Kaynak kod yazmak için nano kullanabilirsiniz. Nanoda renklendirme için valaya destek bulunmamaktadır. Vala ile **java** ve **c#** programlama dillerinin renklendirmesi birbirine benzer olduğu için kopyasını kullanarak vala yazarken renklendirme yapabilirsiniz.
 
 Bunun için aşağıdaki yolu izleyin.
 

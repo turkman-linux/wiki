@@ -39,13 +39,18 @@ Servisleri başlatıp durdurmak için ise **rc-service** komutu kullanılır.
 	# veya şu şekilde de çalıştırılabilir.
 	$ /etc/init.d/udhcpc start
 
-Servislerin durmunu öğrenmek için **rc-status** komutu kullanılır.
+Servislerin durmunu öğrenmek için **rc-status** komutu kullanılır. Ayrıca
+sistemdeki servislerin sonraki açılışta hangisinin başlatılacağını öğrenmek için
+ise parametresiz olarak **rc-update** kullanabilirsiniz.
 
 .. code-block:: shell
 
+	# şu an hangi servislerin çalıştığını gösterir
 	$ rc-status
+	# sonraki açılışta hangi servislerin çalışacağını gösterir
+	$ rc-update
 
-Sistemi kapatmak / yeniden başlatmak için **openrc-shutdown** komutunu kullanabilirsiniz.
+Sistemi kapatmak veya yeniden başlatmak için **openrc-shutdown** komutunu kullanabilirsiniz.
 
 .. code-block:: shell
 
@@ -107,5 +112,3 @@ Servis bağımlılıklarını belirtmek için ise **depend** fonksiyonu kullanı
 	...
 
 Openrc teorik olarak sysv-init betiklerini de çalıştırabilir. Fakat kesinlikle tavsiye edilmemektedir.
-
-

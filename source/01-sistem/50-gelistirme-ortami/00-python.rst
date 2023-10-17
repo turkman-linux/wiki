@@ -20,7 +20,7 @@ Kaynak koddan yüklemek için aşağıdaki adımları takip ediniz.
 	$ make
 	$ make install
 
-Türken linux size birden çok python sürümünü aynı anda kullanmasına olanak tanır.
+Türkmen linux size birden çok python sürümünü aynı anda kullanmasına olanak tanır.
 Bunun için **pydefault** komutu kullanarak varsayılan sürümü değiştirebilirsiniz.
 
 .. code-block:: shell
@@ -42,5 +42,3 @@ pip komutunu etkinleştirmek için aşağıdaki komutu kullanın.
 
 İlk komut python ile gelen pip modülünü çalıştırarak pip kullanmanıza olanak tanır.
 İkinci komut ise pip sürümünü güncellemek için kullanılır.
-
-

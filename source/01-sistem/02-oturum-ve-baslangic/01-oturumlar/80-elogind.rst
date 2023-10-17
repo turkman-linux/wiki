@@ -1,7 +1,7 @@
 .. _elogind:
 Elogind
 =======
-**elogind** systemd projesinde bulunan **logind** uygulamasının bağımsız çalışabilen halinin halidir.
+**elogind** systemd projesinde bulunan **logind** uygulamasının systemd'den bağımsız çalışabilen halidir.
 Amacı kullanıcı oturumlarını yönetmektir. **Pam** kullanarak çalışır.
 
 Kurulumu
