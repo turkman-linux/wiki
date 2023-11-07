@@ -30,11 +30,14 @@ Service açmadıysanız **seatd-launch sway** komutu kullanabilirsiniz.
 Kullanımı
 ^^^^^^^^^
 Temel kısayollar aşağıdaki gibi sıralanabilir:
-* super + enter = yeni terminal aç
-* super + ok tuşu = pencereler arası geçiş
-* super + shift + ok tuşu = pencere konumunu ayarla
-* super + [1-9] = masaüstüne geç
-* super + shift + [1-9] = pencereyi masaüstüne taşı
+
+* `super + enter` = yeni terminal aç
+* `super + ok tuşu` = pencereler arası geçiş
+* `super + shift + ok tuşu` = pencere konumunu ayarla
+* `super + [1-9]` = masaüstüne geç
+* `super + shift + [1-9]` = pencereyi masaüstüne taşı
+* `super + Shift + Q` = pencereyi kapat
+* `super + shift + E` = sway ortamını kapat
 
 Yapılandırma
 ^^^^^^^^^^^^
