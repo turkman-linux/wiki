@@ -1,6 +1,0 @@
-Blog
-====
-.. toctree::
-	:glob:
-
-	*
