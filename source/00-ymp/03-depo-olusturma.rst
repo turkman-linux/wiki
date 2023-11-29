@@ -28,8 +28,8 @@ Depo olarak kullanılacak dizinimi oluşturalım.
 
 	ymp repo --index ./ \
 	    --move --name="main" \
-      --gpg:repicent=<repicent-değeri> \
-      --verbose
+	    --gpg:repicent=<repicent-değeri> \
+	    --verbose
 	# --move paketleri taşır
 	# --verbose detaylı çıktı verir
 	# --name depo adını belirtir
