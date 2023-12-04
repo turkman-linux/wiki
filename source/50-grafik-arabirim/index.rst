@@ -1,5 +1,5 @@
-X11
-===
+Grafik Arabirim
+===============
 .. toctree::
 	:glob:
 
