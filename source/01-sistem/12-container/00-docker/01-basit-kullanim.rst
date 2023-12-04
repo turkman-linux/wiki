@@ -1,5 +1,5 @@
-Basit kullanımı
-===============
+Basit kullanım
+==============
 **docker run** komutu, Docker'da yeni bir container başlatmak ve çalıştırmak için kullanılır.
 Bu komut, bir Docker imajını temel alarak bir container başlatır ve bu containeri belirli ayarlarla çalıştırmanızı sağlar.
 
