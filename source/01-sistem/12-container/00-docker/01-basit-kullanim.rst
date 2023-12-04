@@ -87,7 +87,7 @@ Bu komut, çalışan containerlerin temel bilgilerini, ID'lerini, isimlerini, ba
 
 Örnekler:
 
-    Tüm çalışan containerleri listeleme:
+Tüm çalışan containerleri listeleme:
 
 .. code-block:: shell
 
