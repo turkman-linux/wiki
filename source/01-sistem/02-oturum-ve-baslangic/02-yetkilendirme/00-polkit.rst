@@ -50,3 +50,42 @@ Kullandığınız masaüstüne göre polkit-agent yüklemeniz gereklidir. Aşağ
 
 Not: polkit agent desdeği olmayan masaüstülerde **polkit-gnome** kullanabilirsiniz.
 
+Kurallar
+^^^^^^^^
+Polkit kular dosyaları **/usr/share/polkit/rules.d/** ve **/etc/polkit/rules.d** dizinlerinde bulunur. Bu dizinlere kurallar ekleyebilirsiniz. Örneğin test gurubundaki herşeye yetki vermek için :
+
+.. code-block:: javascript
+
+  polkit.addRule(function(action, subject) {
+      if (subject.isInGroup("test")) {
+        return polkit.Result.YES;
+    }
+  });
+
+**Not:** Yukarıdaki örnek sadece konuyu anlatmak içindir. Güvenlik sorunlarına sebep olabilir.
+
+Eylemler
+^^^^^^^^
+Kural dosyalarına benzer şekilde eylem dosyaları da bulunur. Bu dosyalar ise **/usr/share/polkit-1/actions** içerisinde bulunur. 
+
+Örneğin:
+
+.. code-block:: xml
+
+  <policyconfig>
+    <vendor>Test Vendor</vendor>
+    <vendor_url>https://example.org</vendor_url>
+    <action id="org.turkman.test.application">
+      <description>Test application</description>
+      <message>Authentication is required for test application</message>
+      <message xml:lang="tr">Test uygulaması için yetkilendirme gerekiyor</message>
+      <icon_name>preferences-system</icon_name>
+      <defaults>
+        <allow_any>yes</allow_any>
+        <allow_inactive>yes</allow_inactive>
+        <allow_active>yes</allow_active>
+      </defaults>
+      <annotate key="org.freedesktop.policykit.exec.path">/usr/sbin/test</annotate>
+      <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+    </action>
+  </policyconfig>
