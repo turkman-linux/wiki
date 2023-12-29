@@ -29,24 +29,24 @@ Polkit-agent
 Kullandığınız masaüstüne göre polkit-agent yüklemeniz gereklidir. Aşağıda tablo olarak gerekenler verilmiştir.
 
 .. list-table:: Polkit Agent Listesi
-	:widths: 50 50
-	:header-rows: 1
-
-	* - Masaüstü
-	  - paket
-	  - sağladığı komut
-	* - Kde
-	  - polkit-kde-agent
-	  - /usr/lib64/libexec/polkit-kde-authentication-agent-1
-	* - lxde
-	  - lxsession
-	  - /usr/bin/lxpolkit
-	* - cinnamon
-	  - polkit-gnome
-	  - /usr/libexec/polkit-gnome-authentication-agent-1
-	* - xfce
-	  - xfce-polkit
-	  - /usr/lıbexec/xfce-polkit
+   :widths: 30 30 30
+   :header-rows: 1
+   
+   * - Masaüstü
+     - paket
+     - sağladığı komut
+   * - Kde
+     - polkit-kde-agent
+     - /usr/lib64/libexec/polkit-kde-authentication-agent-1
+   * - lxde
+     - lxsession
+     - /usr/bin/lxpolkit
+   * - cinnamon
+     - polkit-gnome
+     - /usr/libexec/polkit-gnome-authentication-agent-1
+   * - xfce
+     - xfce-polkit
+     - /usr/libexec/xfce-polkit
 
 Not: polkit agent desdeği olmayan masaüstülerde **polkit-gnome** kullanabilirsiniz.
 
