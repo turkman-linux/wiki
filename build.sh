@@ -1,6 +1,6 @@
 #!/bin/sh
 # temizlik
-
+set -ex
 rm -rf build
 rm -rf source/99-kodlama
 # sayfalar dokümanı dizini

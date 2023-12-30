@@ -1,5 +1,5 @@
 Polkit
-=====
+======
 Polkit yetkisiz uygulamaların yetkili olan uygulamalar ile iletişim kurmasını sağlayan bir araçtır. Örneğin gparted gibi uygulamaları başlatmak için **pkexec** komutu ile root yetkisi sağlanır.
 
 Kurulum

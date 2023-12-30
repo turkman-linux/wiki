@@ -1,5 +1,5 @@
 sway
-======
+====
 Sway wayland pencere yöneticisidir. Sway X11 ortamındaki i3 pencere yöneticisinın benzeridir.
 
 .. image:: /_static/images/sway-desktop.png
