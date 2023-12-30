@@ -51,7 +51,6 @@ Weston'u çalıştırdığınızda, birkaç parametre ile özelleştirebilirsini
     $ weston --backend=drm-backend --fullscreen --width=1920 --height=1080
 
 Bu komut, Weston'u DRM (Direct Rendering Manager) arka uç kullanarak tam ekran modunda ve 1920x1080 çözünürlükte başlatacaktır.
-Weston Yapılandırma Dosyası
 
 Yapılandırma
 ++++++++++++
