@@ -54,7 +54,7 @@ Kurallar
 ^^^^^^^^
 Polkit kural dosyaları **/usr/share/polkit/rules.d/** ve **/etc/polkit/rules.d** dizinlerinde bulunur. Bu dizinlere kurallar ekleyebilirsiniz. Örneğin test gurubundaki herşeye yetki vermek için :
 
-.. code-block:: javascript
+.. code-block:: shell
 
 	polkit.addRule(function(action, subject) {
 	    if (subject.isInGroup("test")) {
