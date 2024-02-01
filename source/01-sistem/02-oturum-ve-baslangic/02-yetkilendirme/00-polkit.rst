@@ -56,11 +56,11 @@ Polkit kular dosyaları **/usr/share/polkit/rules.d/** ve **/etc/polkit/rules.d*
 
 .. code-block:: javascript
 
-  polkit.addRule(function(action, subject) {
-      if (subject.isInGroup("test")) {
-        return polkit.Result.YES;
-    }
-  });
+	polkit.addRule(function(action, subject) {
+	    if (subject.isInGroup("test")) {
+	      return polkit.Result.YES;
+	  }
+	});
 
 **Not:** Yukarıdaki örnek sadece konuyu anlatmak içindir. Güvenlik sorunlarına sebep olabilir.
 
@@ -72,20 +72,20 @@ Kural dosyalarına benzer şekilde eylem dosyaları da bulunur. Bu dosyalar ise 
 
 .. code-block:: xml
 
-  <policyconfig>
-    <vendor>Test Vendor</vendor>
-    <vendor_url>https://example.org</vendor_url>
-    <action id="org.turkman.test.application">
-      <description>Test application</description>
-      <message>Authentication is required for test application</message>
-      <message xml:lang="tr">Test uygulaması için yetkilendirme gerekiyor</message>
-      <icon_name>preferences-system</icon_name>
-      <defaults>
-        <allow_any>yes</allow_any>
-        <allow_inactive>yes</allow_inactive>
-        <allow_active>yes</allow_active>
-      </defaults>
-      <annotate key="org.freedesktop.policykit.exec.path">/usr/sbin/test</annotate>
-      <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
-    </action>
-  </policyconfig>
+	<policyconfig>
+	  <vendor>Test Vendor</vendor>
+	  <vendor_url>https://example.org</vendor_url>
+	  <action id="org.turkman.test.application">
+	    <description>Test application</description>
+	    <message>Authentication is required for test application</message>
+	    <message xml:lang="tr">Test uygulaması için yetkilendirme gerekiyor</message>
+	    <icon_name>preferences-system</icon_name>
+	    <defaults>
+	      <allow_any>yes</allow_any>
+	      <allow_inactive>yes</allow_inactive>
+	      <allow_active>yes</allow_active>
+	    </defaults>
+	    <annotate key="org.freedesktop.policykit.exec.path">/usr/sbin/test</annotate>
+	    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+	  </action>
+	</policyconfig>
