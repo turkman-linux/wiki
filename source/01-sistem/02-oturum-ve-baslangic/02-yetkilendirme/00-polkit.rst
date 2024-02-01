@@ -52,7 +52,7 @@ Not: polkit agent desdeği olmayan masaüstülerde **polkit-gnome** kullanabilir
 
 Kurallar
 ^^^^^^^^
-Polkit kular dosyaları **/usr/share/polkit/rules.d/** ve **/etc/polkit/rules.d** dizinlerinde bulunur. Bu dizinlere kurallar ekleyebilirsiniz. Örneğin test gurubundaki herşeye yetki vermek için :
+Polkit kural dosyaları **/usr/share/polkit/rules.d/** ve **/etc/polkit/rules.d** dizinlerinde bulunur. Bu dizinlere kurallar ekleyebilirsiniz. Örneğin test gurubundaki herşeye yetki vermek için :
 
 .. code-block:: javascript
 
