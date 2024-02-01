@@ -19,6 +19,7 @@ for sayfa in c-dersi bash-dersi vala-dersi python-dersi makefile-dersi git-kulla
 done
 make html pdf
 find build/html -type f -iname *.html -exec sed -i "s/.*src=\".*\.js\".*//g" {} \;
+find build/html -type f -iname *.html -exec sed -i "s/.*script.*//g" {} \;
 find build/html -type f -iname *.js -exec rm -rf {} \;
 rm -rf build/html/_static/css build/html/{search,genindex}.html
 
