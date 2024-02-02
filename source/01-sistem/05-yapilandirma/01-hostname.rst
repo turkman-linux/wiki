@@ -25,6 +25,7 @@ Servis yöneticisini kullanmadan **hostname** komutunu kullanarak makina adını
 	$ hostname sunucu01
 
 **Not:** Makina adı belirlerken belirlerken aşağıdaki kurallara dikkat etmelisiniz:
+
 * büyük harf içermemeli
 * ilk harf sayı olmamalı
 * 253 karakterden uzun olmamalı
