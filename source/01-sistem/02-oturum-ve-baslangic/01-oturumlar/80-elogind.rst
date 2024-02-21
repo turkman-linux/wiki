@@ -2,6 +2,7 @@
 Elogind
 =======
 **elogind** systemd projesinde bulunan **logind** uygulamasının systemd'den bağımsız çalışabilen halidir.
+Genellikle systemd'i kullanmayan ancak KDE veya GNOME gibi systemd'e bağımlı yazılımları kullanmak isteyen kullanıcılar için tercih edilir.
 Amacı kullanıcı oturumlarını yönetmektir. **Pam** kullanarak çalışır.
 
 Kurulumu
@@ -57,39 +58,60 @@ Bu komut aşağıdaki gibi çıktı verir.
 	
 	1 sessions listed.
 
-
-Oturumu kontrolü
-^^^^^^^^^^^^^^^^
-Oturumu kapatmak için:
-
-.. code-block:: shell
-
-	$ loginctl terminate-session <session-id>
-
-Ekranı kilitlemek için:
+Kullanım
+^^^^^^^^
+**loginctl** komutu, oturum yöneticisini denetlemek ve analiz etmek için kullanılır.
+Örneğin, sistemi kapatmak veya yeniden başlatmak için şu komutları kullanabilirsiniz:
 
 .. code-block:: shell
 
-	$ loginctl lock-session <session-id>
+	loginctl poweroff
+	loginctl reboot
 
-Sistem kontrolü
-^^^^^^^^^^^^^^^
-Sistemi kapatmak için:
-
-.. code-block:: shell
-
-	$ loginctl poweroff
-
-Sistemi yeniden başlatmak için
+Uyku moduna almak için ise şu komutları kullanabilirsiniz:
 
 .. code-block:: shell
 
-	$ loginctl reboot
-
-Sistemi uyku moduna almak için
-
-.. code-block:: shell
-
-	$ loginctl suspend
+	loginctl suspend
 
 **Not:** Uyku modu bazı donanımlarda düzgün çalışmayabilir.
+
+
+Oturum kontrolü
++++++++++++++++
+**loginctl** komutu, Linux sistemlerinde oturumları kontrol etmek ve yönetmek için kullanılır.
+Bu komut, kullanıcıların oturumlarını listeleme, oturumları kapatma, ekranları kilitleme, sistem işlemlerini gerçekleştirme gibi çeşitli işlemleri gerçekleştirmek için kullanılır.
+
+Oturumları Listeleme:
+
+.. code-block:: shell
+
+	loginctl list-sessions
+
+Bu komut, sistemdeki tüm oturumları listeler. Her oturumun bir oturum kimliği (session id) bulunur.
+
+Oturumu Kapatma:
+
+.. code-block:: shell
+
+	loginctl terminate-session <session-id>
+
+Bu komut, belirtilen oturumu sonlandırır. <session-id>, sonlandırmak istediğiniz oturumun kimliğidir.
+
+Ekranı Kilitleme:
+
+.. code-block:: shell
+
+	loginctl lock-session <session-id>
+
+Bu komut, belirtilen oturumun ekranını kilitlemeye yarar. <session-id>, kilitlemek istediğiniz oturumun kimliğidir.
+
+Ekran Kilidini Açma:
+
+.. code-block:: shell
+
+	loginctl unlock-session <session-id>
+
+Bu komut, belirtilen oturumun ekranının kilidini açar. <session-id>, kilidini açmak istediğiniz oturumun kimliğidir.
+
+
