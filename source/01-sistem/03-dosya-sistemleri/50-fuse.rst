@@ -42,7 +42,7 @@ Yapılandırma
 ^^^^^^^^^^^^
 FUSE için kullanılabilir yapılandırma dosyaları şunlardır:
 
-..code-block:: shell
+.. code-block:: shell
 
 	/etc/fuse.conf
 
