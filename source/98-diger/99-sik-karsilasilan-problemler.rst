@@ -50,7 +50,7 @@ Ardından kodumuzu gdb yardımı ile çalıştıralım.
 .. code-block:: C
 
 	int main(){
-		char* test; // pointer tanımladık.
+	    char* test; // pointer tanımladık.
 	    test[1] = 'c'; // mevcut olmayan bir yere yazmaya çalıştık.
 	    return 0;
 	}
