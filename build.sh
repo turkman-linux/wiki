@@ -11,7 +11,7 @@ Programlama
 .. toctree::
 	:glob:
 
-	*-dersi
+	*
 
 EOF
 for sayfa in c-dersi bash-dersi vala-dersi python-dersi makefile-dersi git-kullanimi docker-kullanimi ; do

@@ -89,6 +89,7 @@ Openrc servis dosyaları basit birer **bash** betiğidir. Bu betikler **openrc-r
 	command_args=--parametre
 	pidfile=/run/ornek-servis.pid
 
+
 Bununla birlikte **start**, **stop**, **status**, **reload**, **start_pre**, **stop_pre** gibi fonksiyonlar da yazabiliriz.
 
 .. code-block:: shell
