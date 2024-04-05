@@ -36,7 +36,7 @@ Bu işlem önce kaynak kodu indirir ve doğrular. ardındar istenilen komutlara 
 	        "some-stuff.patch"
 	)
 	arch=(x86_64 aarch64)
-	md5sums=('bb91a17fd6c9032c26d0b2b78b50aff5'
+	sha256sums=('bb91a17fd6c9032c26d0b2b78b50aff5'
 	    'SKIP'
 	)
 	license=('GplV3')
@@ -88,11 +88,14 @@ Değişkenler
 * **email** : Paketçinin email adresidir.
 * **maintainer** : Paket bakımcısının adıdır. (veya nickname)
 
+Not: ymp derleme işleminin ardından paket boyutunu azaltmak için **strip** işlemini otomatik oralak uygulamaktadır. Bu durum bazı paketlerin bozulmasına sebep olabilir. Bunu engellemek için **dontstrip** değişkeni tanımlayarak bir değer atayabilirsiniz.
+
+
 Diziler
 +++++++
 * **depends** : Paket bağımlılıklarını belirtir
 * **source** : Paket kaynak kodları listesini belirtir
-* **md5sums** : Paket md5sum değeri listesidir. **SKIP** olan elemanları görmezden gelinir.
+* **sha256sums** : Paket sha256sum değeri listesidir. **SKIP** olan elemanları görmezden gelinir.
 * **uses** ve **uses_extra** : use flag listesidir.
 * **arch** : Desteklenen mimari listesidir.
 
@@ -189,3 +192,32 @@ Eğer özellik listesi olarak **all** belirtirseniz **uses** dizisindeki tüm ö
 **Not:** sistemimizin mimarisi ile aynı adda use flag otomatik olarak tanımlanır ve kullanılır.
 Bu sayede tek bir ympbuild dosyası ile birden çok mimariye uyumlu paket üretilebilir.
 
+Git tabanlı paketler
+^^^^^^^^^^^^^^^^^^^^
+Ymp paket deposu dışında bir git deposunu kullanarak paketler oluşturmanıza izin verir. Bu sayede bir paketi depoya bağlı kalmadan paylaşabilirsiniz.
+
+Bunun için öncelikle **ymp template** kullanarak ympbuild dosyamızı oluşturalım. Ardından oluşturduğumuz dizini git deposu haline getirelim.
+
+.. code-block:: shell
+
+	$ ymp template --name=example --output=test-package ...
+	$ cd test-package 
+	$ git init
+
+Git adresimizi ekleyelim ve commit oluşturup gönderelim.
+
+.. code-block:: shell
+
+	$ git remote add origin git@example.org:yourname/test-package.git
+	$ git commit -m "first commit"
+	$ git push -u origin master
+
+Not: **ympbuild** dosyamız git deposunun ana dizininde bulunmalıdır.
+
+Paketi aşağıdaki gibi derleyebiliriz. 
+
+.. code-block:: shell
+
+	$ ymp build --output=/path/to/output git@example.org:yourname/test-package.git
+
+Not: git tabanlı paketler güvenilir olmayan paket olarak işaretlenir. Yüklemek için **--unsafe** parametresi kullanmanız gerekebilir.
