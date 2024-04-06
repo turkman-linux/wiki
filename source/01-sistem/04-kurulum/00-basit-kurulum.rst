@@ -11,7 +11,7 @@ Eğer uefi ise ia32 veya x86_64 olup olmadığını anlamak için **/sys/firmwar
 .. code-block:: shell
 
 	[[ -d /sys/firmware/efi/ ]] && echo UEFI || echo Legacy
-	[[ "64" == $(cat/sys/firmware/efi/fw_platform_size) ]] && echo x86_64 || ia32
+	[[ "64" == $(cat/sys/firmware/efi/fw_platform_size) ]] && echo x86_64 || echo ia32
 
 Disk Bölümlendirme
 ^^^^^^^^^^^^^^^^^^
