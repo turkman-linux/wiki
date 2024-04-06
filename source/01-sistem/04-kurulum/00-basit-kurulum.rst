@@ -44,12 +44,12 @@ Eğer /boot bölümünü ayırmayacaksanız grub yüklenirken **unknown filesyst
 
 Dosya sistemini kopyalama
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-Türkmen linuxta kurulum medyası **/cdrom** dizinine bağlanır.
 Kurulacak sistemin imajını bir dizine bağlayalım.
 
 .. code-block:: shell
 
-	$ mount /cdrom/live/filesystem.squashfs /source
+	# /dev/loop0 bağlayalım
+	$ mount -o loop /dev/loop0 /source
 
 Şimdi de bölümlerimizi bağlayalım.
 
@@ -93,7 +93,7 @@ Sisteme **ymp chroot** komutu ile girelim.
 
 .. code-block:: shell
 
-	$ mount -t efivarfs efivarfs /sys/firmware/efi/efivarfs
+	$ mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 
 Grub paketini yükleyelim.
 
