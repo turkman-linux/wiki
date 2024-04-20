@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="{{ pathto('_static/styles.css', 1) }}" type="text/css">
     <meta name="description" content="{{ title }}">
     <meta name="keywords" content="{{ title }}, {{ project }}, {{ copyright }}">
-  <meta name="author" content="{{ copyright }}">
-  <meta name="robots" content="index, follow">
+    <meta name="author" content="{{ copyright }}">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{{ project }}" />
+    <meta property="og:description" content="{{ title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="{{ pathto('_static/logo.svg', 1) }}" />
 </head>
 <body>
     <div class="container">
