@@ -1,0 +1,150 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #181a1b;
+    color: #dddad6;
+}
+
+.container {
+    color: #ccc;
+    flex-direction: row;
+    height: 100%;
+}
+
+.sidebar {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #131313;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.main-content {
+  margin-left: 300px; /* Same as the width of the sidenav */
+  padding: 0px 31px;
+  max-width: 1031px;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .sidebar {
+        height: auto;
+        width: 100%; /* Occupy full width of the screen on small screens */
+        display: block; /* Show sidebar */
+        position: static; /* Remove fixed positioning */
+        padding-top: 0; /* Remove top padding */
+    }
+    .main-content {
+        margin-left: 0px; /* Same as the width of the sidenav */
+        padding: 31px 31px;
+    }
+}
+
+
+/* Sphinx specific styling */
+
+/* Title */
+.document-title {
+    color: #fff; /* Light text color */
+}
+
+/* Subtitle */
+.subtitle {
+    color: #ccc; /* Light text color */
+}
+
+/* Sidebar links */
+.toctree-l1 {
+    color: #ccc; /* Light text color */
+}
+
+/* Active sidebar link */
+.toctree-l1.current {
+    color: #fff; /* Light text color */
+    font-weight: bold;
+}
+
+/* Code blocks */
+.highlight pre {
+    background-color: #222; /* Darker background color */
+    color: #fff; /* Light text color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px;
+    font-family: monospace;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.title{
+    text-align: center;
+    font-size: 32px;
+}
+
+.literal{
+    color: #8ec1ec;
+}
+.name{
+    color: #93c8f5;
+}
+.number{
+    color: #096634;
+}
+.builtin, .double{
+    color: #57aef9;
+}
+.keyword, .operator, .interpol{
+    color: #d73c4b;
+}
+.variable{
+    color: #663409;
+}
+.double {
+    color: #93c8f5;
+}
+.comment{
+    color: #7c848e;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td, table th {
+  border: 1px solid #373c3e;
+  padding: 8px;
+}
+
+
+table th {
+  text-align: left;
+  color: black;
+}
+caption {
+  padding: 8px;
+}
+
+a {
+  color: #57aef9;
+  text-decoration: none;
+}
+
+

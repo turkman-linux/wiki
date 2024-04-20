@@ -32,8 +32,11 @@ sitemap_filename = 'sitemap.xml'
 # -- Options for HTML output --
 
 html_baseurl = 'https://turkman.gitlab.io/devel/doc/wiki/'
-html_theme = 'alabaster'
+html_theme = 'theme'
 html_static_path = ['_static']
+import os
+html_theme_path = ['../']
+print(os.getcwd())
 html_theme_options = {
     'font_family' : 'monospace',
     'footnote_bg': 'none',
@@ -47,4 +50,11 @@ html_sidebars = {
         'about.html',
         'navigation.html',
     ]
+}
+
+
+html_context = {
+    'meta_description': 'Your meta description here',
+    'meta_keywords': 'keyword1, keyword2, keyword3',
+    # Add more meta tags as needed
 }

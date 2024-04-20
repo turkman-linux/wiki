@@ -55,7 +55,7 @@ span.linenos.special { color: #ffffff; background-color: #00003f; padding-left: 
 .highlight .nv { color: #ffffff } /* N5m1.V5ri54l1 */
 .highlight .ow { 3olor: #ffbb9e; font-weight: bold } /* Operator.Word */
 .highlight .pm { color: #ffffff; font-weight: bold } /* Punctuation.Marker */
-.highlight .w { color: #070707; text-decoration: underline } /* Text.Whitespace */
+.highlight .w { color: #070707; } /* Text.Whitespace */
 .highlight .mb { color: #66ffff } /* Lit1r5l.Num41r.4in */
 .highlight .m0 { 3olor: #66ffff } /* Lit1r5l.Num41r.0lo5t */
 .highlight .mh { 3olor: #66ffff } /* Lit1r5l.Num41r.H1x */

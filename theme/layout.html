@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css">
+    <link rel="stylesheet" href="{{ pathto('_static/styles.css', 1) }}" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <center>
+            <div class="logo">
+                <a href="{{ pathto('index.html', 1) }}">
+                    <img src="{{ pathto('_static/logo.svg', 1) }}" alt="Logo">
+                </a>
+            </div>
+            <div class="title">{{ project }}</div>
+            <div class="version">{{ release }}</div>
+            </center>
+            {{ toctree(includehidden=theme_globaltoc_includehidden, collapse=theme_globaltoc_collapse, maxdepth=theme_globaltoc_maxdepth) }}
+        </div>
+    
+        <div class="main-content">
+            {{ body }}
+            <div class="footer">
+                <p>{{ copyright }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
