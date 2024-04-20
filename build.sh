@@ -18,9 +18,6 @@ for sayfa in c-dersi bash-dersi vala-dersi python-dersi makefile-dersi git-kulla
     curl https://gitlab.com/sulincix/sayfalar/-/raw/master/rst/$sayfa.rst > source/99-kodlama/$sayfa.rst
 done
 make html pdf
-find build/html -type f -iname *.html -exec sed -i "s/<script/<!--script/g;s/<\/script>/<script-->/g;/^$/d;/^ *$/d" {} \;
-find build/html -type f -iname *.js -exec rm -rf {} \;
-rm -rf build/html/_static/css build/html/{search,genindex}.html
 
 rm build/html/index.html
 ln -s main.html build/html/index.html
