@@ -4,6 +4,27 @@ Yüksek çözünürlüklü ve küçük boyutlu ekranlar HDPI (High Dots Per Inch
 
 Bu tür ekranlarda varsayılan olan ölçekleme değeri ile kullanım yazıların çok küçük kalmasına sebep olabilir. Bu sebeple ölçekleme gerekebilir.
 
+Dpi hesaplama
+^^^^^^^^^^^^^
+Dpi pixel yoğunluğunu ifade eder ve ne kadar büyükse o kadar yüksek kaliteli bir ekrana sahip olduğunuz anlamına gelir. Ekranlar için 96 ve üstü değerler normaldir. Daha düşük değerler ile ekranın kalitesiz olduğunu ifade eder.
+Dpi hesaplamak için ekranın inç türünden boyutu ve çözünürlük bilgisi gerekmektedir.
+
+Aşağıdaki python kodu ile hesaplanabilir.
+
+.. code-block:: python
+
+	def calc_dpi(size, height, width):
+	    dpi = (height**2 + width**2)**0.5 / size
+	    print(dpi)
+	# örneğin 1920x1080 ve 23 inç ekran için
+	# (1920**2 + 1080**2)**0.5 / 23 = 95.77857261227383
+	# örneğin 2560x1440 ve 27 inç ekran için
+	# (2540**2 + 1440**2)**0.5 / 27 = 94.9646963498124
+
+Yukarıdaki örnek ekran boyutu ve çözünürlükleri yaklaşık 96dpi olduğu için ölçeklemeye gerek yoktur. 
+
+Sistem varsayılan dpi değerini 96 olarak alır. Ölçeklendirmeyi bu değere göre yapmalısınız.
+
 Gtk için
 ^^^^^^^^
 Gtk ölçeklemek için **GDK_SCALE** değişkeni ayarlanmalıdır.
