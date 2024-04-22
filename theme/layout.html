@@ -14,7 +14,7 @@
     <meta property="og:title" content="{{ project }}" />
     <meta property="og:description" content="{{ title }} - {{ project }}" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="/{{ pathto('_static/logo.svg', 1) }}" />
+    <meta property="og:image" content="{{ html_baseurl }}/{{ pathto('_static/logo.svg', 1) }}" />
 </head>
 <body>
     <div class="container">
@@ -27,6 +27,12 @@
             </div>
             <div class="title">{{ project }}</div>
             <div class="version">{{ release }}</div>
+            {% if prev %}
+            <a href="{{ prev.link|e }}" title="{{ prev.title }}"><==</a> ||
+            {% endif %}
+            {% if next %}
+            <a href="{{ next.link|e }}" title="{{ next.title }}">==></a>
+            {% endif %}
             </center>
             {{ toctree(includehidden=theme_globaltoc_includehidden, collapse=theme_globaltoc_collapse, maxdepth=theme_globaltoc_maxdepth) }}
         </div>
