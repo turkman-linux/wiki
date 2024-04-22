@@ -126,17 +126,18 @@ h2 {
 table {
   border-collapse: collapse;
   width: 100%;
+  padding: 8px;
+  background: #222;
 }
 
 table td, table th {
   border: 1px solid #373c3e;
-  padding: 8px;
 }
 
 
 table th {
-  text-align: left;
-  color: black;
+  text-align: center;
+  color: white;
 }
 caption {
   padding: 8px;
