@@ -2,9 +2,10 @@
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
+import datetime
 
 project = 'Türkmen Wiki'
-copyright = 'Türkmen Linux 2023'
+copyright = 'Türkmen Linux '+str(datetime.datetime.now().year)
 author = 'turkman'
 language = 'tr'
 extensions = ['sphinx.ext.autodoc', 'rst2pdf.pdfbuilder', 'sphinx_sitemap']
