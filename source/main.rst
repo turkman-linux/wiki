@@ -4,6 +4,8 @@ Bu wikiye katkı sağlamak için https://gitlab.com/turkman/devel/doc/wiki/ adre
 
 Bu dokümana https://turkman.gitlab.io/devel/doc/wiki/rst2pdf.pdf adresinden çevirimdışı pdf formatında da erişebilirsiniz.
 
+Bu doküman [python-sphinx](https://www.sphinx-doc.org). kullanılarak oluşturulmuştur. Dokümanın kendisi [GPL (V3)](https://www.gnu.org/licenses/gpl-3.0.en.html) lisansına sahiptir.
+
 Giriş:
 ^^^^^^
 Türkmen Linux bağımsız tabanlı bir GNU/Linux dağıtımıdır. Kendisine ait YMP (Yerli ve Milli Paket) sistemini kullanır.
