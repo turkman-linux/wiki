@@ -55,7 +55,7 @@ Bunun için **/etc/conf.d/agetty** içerisini aşağıdaki gibi değiştirelim.
 	ln -s pam_elogind.so /lib/security/pam_systemd.so
 	ln -s libelogind.pc /lib/pkgconfig/libsystemd.pc
 	ln -s libelogind.pc /lib/pkgconfig/libsystemd-login.pc
-	ln -s elogind "$DESTDIR"/usr/include/systemd
+	ln -s elogind /usr/include/systemd
 
 Benzer şekilde **systemd** çalışıyormuş gibi algımasını sağlamak için servis dosyasına aşağıdaki gibi ekleme yapabilirsiniz.
 
