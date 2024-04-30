@@ -1,3 +1,4 @@
+.. _syslogd:
 syslog
 ======
 Syslog çalışan sistem servislerinin loglarını tutar. 

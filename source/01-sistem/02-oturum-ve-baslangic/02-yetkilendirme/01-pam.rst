@@ -62,6 +62,12 @@ PAM yapılandırma dosyalarında, PAM modüllerinin davranışını belirleyen �
     Bu anahtar kelime, ilgili modülün başarısız olması durumunda, kimlik doğrulama işleminin hala devam edeceğini belirtir. Yani, bu modülün başarısız olması, kimlik doğrulama işlemini doğrudan etkilemez.
 
 
+Pam hata ayıklama
+^^^^^^^^^^^^^^^^^
+Öncelikle :ref:`syslogd<syslogd>` başlatmamız gerekmektedir.
+Ardından **/petc/pam_debug** konumuna boş bir dosya oluşturun.
+Artık pam ile ilgili hata ayıklama mesajlarına syslog üzerinden erişebilirsiniz.
+
 Pam modülü yazmak
 ^^^^^^^^^^^^^^^^^
 Örnek bir pam modülü aşağıdaki gibi olabilir:

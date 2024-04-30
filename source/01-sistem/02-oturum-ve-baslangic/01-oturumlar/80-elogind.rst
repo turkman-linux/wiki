@@ -46,6 +46,29 @@ Bunun için **/etc/conf.d/agetty** içerisini aşağıdaki gibi değiştirelim.
 	agetty_options="-l /usr/bin/login"
 	...
 
+**libsystemd** isteyen uygulama ve kütüphaneler ile uyumluluğu arttırmak için sembolik bağ atabilirsiniz. (İsteğe bağlı)
+
+.. code-block:: shell
+
+	ln -s libelogind.so.0 /lib/libsystemd.so.0
+	ln -s libelogind.so.0 /lib/libsystemd.so.0.35.0
+	ln -s pam_elogind.so /lib/security/pam_systemd.so
+	ln -s libelogind.pc /lib/pkgconfig/libsystemd.pc
+	ln -s libelogind.pc /lib/pkgconfig/libsystemd-login.pc
+	ln -s elogind "$DESTDIR"/usr/include/systemd
+
+Benzer şekilde **systemd** çalışıyormuş gibi algımasını sağlamak için servis dosyasına aşağıdaki gibi ekleme yapabilirsiniz.
+
+.. code-block:: shell
+
+	...
+	start_pre() {
+	  # systemd is running stuff
+	  checkpath --mode 0755 -d /run/systemd/
+	  checkpath --mode 0755 -d /run/systemd/system/
+	}
+	...
+
 Oturumların listelenmesi
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Oturum listelemek için **loginctl** komutunu kullanabilirsiniz.
