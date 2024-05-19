@@ -1,3 +1,4 @@
+.. _ntpd:
 ntpd
 ====
 Sistem saatini bir sunucudan bakarak eşlemeye yarayan araçtır.
