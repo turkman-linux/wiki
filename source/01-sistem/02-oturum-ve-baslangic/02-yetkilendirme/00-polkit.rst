@@ -24,6 +24,9 @@ Sonra servisi etkinleştirelim.
 	$ rc-update add polkit # açılışta başlaması için
 	$ rc-service polkit start # başlatmak için
 
+Son olarak **/etc/shells** dosyasını kontrol edelim.
+**echo $SHELL** komutunu çalıştırınca çıkan değerin bu dosyada bulunması gerekir.
+
 Polkit-agent
 ^^^^^^^^^^^^
 Kullandığınız masaüstüne göre polkit-agent yüklemeniz gereklidir. Aşağıda tablo olarak gerekenler verilmiştir.
@@ -49,6 +52,7 @@ Kullandığınız masaüstüne göre polkit-agent yüklemeniz gereklidir. Aşağ
      - /usr/libexec/xfce-polkit
 
 Not: polkit agent desdeği olmayan masaüstülerde **polkit-gnome** kullanabilirsiniz.
+
 
 Kurallar
 ^^^^^^^^
@@ -89,3 +93,14 @@ Kural dosyalarına benzer şekilde eylem dosyaları da bulunur. Bu dosyalar ise 
 	    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
 	  </action>
 	</policyconfig>
+
+Polkit kullanımı
+^^^^^^^^^^^^^^^^
+**pkexec** komutunu kullanarak polkit çalıştırabilirsiniz. Örneğin:
+
+.. code-block:: shell
+
+	$ pkexec /bin/bash
+
+Burada dikkat etmemiz gereken polkit eylemi olmayan bir komutu çalıştırdığımızda çevresel değişkenler korunmadığı için gui kullanan uygulamaları çalıştıramazsınız.
+
