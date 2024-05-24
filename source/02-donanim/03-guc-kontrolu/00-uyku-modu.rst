@@ -41,7 +41,7 @@ Uyku moduna geçmeyi önlemek için **/etc/elogind/suspend.conf** dosyasını a�
 .. code-block:: shell
 
 	[Sleep]
-  AllowSuspend=yes
+	AllowSuspend=yes
 
 
 Laptop kapağı kapatma eylemi
