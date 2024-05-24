@@ -6,7 +6,13 @@ Uyku moduna almak için öncelikle desteklenen modları kontrol etmelisiniz.
 .. code-block:: shell
 
 	$ cat /sys/power/state
-	>> freeze mem disk
+	>> freeze mem disk standby
+
+Buradaki modlur şu anlama gelir:
+* **freeze**: bekleme modu
+* **mem** uyku modu
+* **disk** hazırda beklet modu
+* **stanby** güç açık bekleme modu
 
 Ardından bilgisayarınız linux için acpi tablosuna sahip olduğunu kontrol edin.
 
@@ -33,6 +39,7 @@ Veya doğrudan kernel üzerinden uyku moduna geçirebilirsiniz.
 	$ echo mem > /sys/power/state
 
 **Not:** Bazı donanımlar uyku modunda düzgün çalışmayabilir.
+
 
 Uyku moduna geçmeyi önleme
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
