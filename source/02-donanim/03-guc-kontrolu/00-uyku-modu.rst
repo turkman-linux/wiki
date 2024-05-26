@@ -9,10 +9,16 @@ Uyku moduna almak için öncelikle desteklenen modları kontrol etmelisiniz.
 	>> freeze mem disk standby
 
 Buradaki modlur şu anlama gelir:
+
 * **freeze**: bekleme modu
-* **mem** uyku modu
-* **disk** hazırda beklet modu
-* **stanby** güç açık bekleme modu
+
+* **mem**: uyku modu
+
+* **disk**: hazırda beklet modu
+
+* **stanby**: güç açık bekleme modu
+
+**Not:** bazı donanımlarda bu modların bir kısmı bulunmayabilir.
 
 Ardından bilgisayarınız linux için acpi tablosuna sahip olduğunu kontrol edin.
 
