@@ -1,3 +1,5 @@
+Temel Kavramlar sözlüğü
+=======================
 Linux'a başlarken sıkça karşılaşabileceğiniz temel kavramlar:
 
 * **ACPI** (Advanced Configuration and Power Interface), bilgisayar donanımının yönetimini sağlayan bir endüstri standardıdır ve enerji tüketimini optimize etmek için kullanılır.
