@@ -39,6 +39,32 @@ Temel kısayollar aşağıdaki gibi sıralanabilir:
 * `super + Shift + Q` = pencereyi kapat
 * `super + shift + E` = sway ortamını kapat
 
+Ekran görüntüsü alma
+^^^^^^^^^^^^^^^^^^^^
+**grim** kullanarak ekran görüntüsü alabilirsiniz.
+
+.. code-block:: shell
+
+	# tüm ekranın görüntüsünü almak için
+	$ grim -o output.png
+
+Ekranın bir bölümünü almak isterseniz **slurp** komutu ile birlikte kullanabilirsiniz.
+
+.. code-blck:: shell
+
+	# ekranın bir bölümünü almak için
+	$ slurp | grim -g -
+
+Kısa yol olarak yapılandırma dosyasına şunu ekleyebilirsiniz.
+
+.. code-block:: shell
+
+	# Prtsc tuşu ile parçalı ekran görüntüsü
+	bindsym Print exec slurp | grim -g -
+	# super + Prtsc ile tüm ekran görüntüsü
+	bindsym $mod+Print exec grim 
+
+
 Yapılandırma
 ^^^^^^^^^^^^
 **/etc/sway/config** dosyası ana yapılandırma dosyasıdır.
