@@ -64,7 +64,9 @@ Bazı donanımlar güç tasarrufu donanımsal profili bulundurur. Eğer mevcutsa
 	# düşük güç
 	echo "low-power" > /sys/firmware/acpi/platform_profile
 	# normal güç
-	echo "power" > /sys/firmware/acpi/platform_profile
+	echo "balanced" > /sys/firmware/acpi/platform_profile
+	# yüksek güç
+	echo "performance" > /sys/firmware/acpi/platform_profile
 
 Turbo boost ayarı
 ^^^^^^^^^^^^^^^^^
