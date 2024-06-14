@@ -1,0 +1,78 @@
+X11
+===
+X11 linux dağıtımlarında kullanılan bir grafik ortamıdır.
+Çoğu masaüstü ortamı ve pencere yöneticisi X11 kullanır.
+
+Elle Başlatma
+^^^^^^^^^^^^^
+Öncelikle **X** komutu ile X11 başlatalım.
+
+.. code-block:: shell
+
+	X :0
+
+Bu komut boş X ekranı açacaktır.
+
+**Not:** Bu komutu root ile çalıştırmalısını. Veya kullanıcınız3 **tty** gurubuna eklemelisiniz.
+
+Ardından **DISPLAY** değişkenimizi ayarlayalım.
+
+.. code-block:: shell
+
+	export DISPLAY=:0
+
+Daha sonra gui uygulamamızı başlatalım.
+
+.. code-block:: shell
+
+	xterm
+
+xinit ile başlatma
+^^^^^^^^^^^^^^^^^^
+Önceki konuda anlatılan şekilde bir masaüstü ortamı başlatmak uzun ve zahmetli olduğu için **xinit** kullanabiliriz.
+
+Öncelikle kullanıcı ev dizinimize **.xinitrc** dosyası açalım ve aşağıdaki gibi içini dolduralım.
+
+.. code-block:: shell
+
+	exec xterm
+
+Ardından **startx** komutu ile oturum başlatabilirsiniz.
+
+.. code-block:: shell
+
+	startx
+
+**Not:** Kullanıcınızı **tty** gurubuna eklemelisiniz.
+
+Uzak makinaya pencere yollamak
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Öncelikle uzak makinadaki X11 dinleme modunda çalışmalıdır.
+
+Bunun için **/etc/X11/xinit/xserverrc** dosyamızı aşağıdaki gibi ayarlayalım.
+
+.. code-block:: shell
+
+	# -nolisten yerine -listen gelmeli
+	# -ac eklenmeli. 
+	exec /usr/bin/Xorg -listen tcp -ac "$@" 
+
+**Not:** **-ac** parametresi farklı hostname değerine sahip makinadan ekran açabilmeyi sağlar.
+
+Ardından pencere gönderecek makinada **DISPLAY** değişkenimizi aşağıdaki gibi ayarlamalıyız.
+
+.. code-block:: shell
+
+	# örneğin ip 192.160.0.31 olsun
+	# örneğin :0 açık olsun
+	export DISPLAY=192.168.0.31:0
+
+Şimdi pencere yollayabiliriz.
+
+.. code-block:: shell
+
+	xterm
+
+**Önemli Not:** Ağ bağlantınız yavaşsa performans sorunları olabilir. 
+
+
