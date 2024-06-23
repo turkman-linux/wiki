@@ -90,7 +90,7 @@ Temayı test etmek için **widget-factory** kullanabilirsiniz. Gtk3 için:
 
 	$ gtk3-widget-factory
 
-.. image:: /_static/images/gtk3-widget-factory.jpg
+.. image:: /_static/images/gtk3-widget-factory.png
   :width: 400
 
 Gdk backend ayarı
@@ -146,7 +146,7 @@ Hata ayıklama
 ^^^^^^^^^^^^^
 Gtk uygulamalarında hata ayıklama yapmak için **GTK_DEBUG=all** ve **G_MESSAGES_DEBUG=all** çevresel değişkenleri ayarlanır.
 
-.. image:: /_static/images/gtk-debug-interactive.jpg
+.. image:: /_static/images/gtk-debug-interactive.png
   :width: 400
 
 
