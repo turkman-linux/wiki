@@ -82,6 +82,17 @@ Flatpak uygulamaları temanızı dikkate almıyorsa aşağıdaki komut ile düze
 	# sistem temaları
 	$ flatpak override org.example.application --filesystem=/usr/share/themes:ro
 
+Tema test etme
+^^^^^^^^^^^^^^
+Temayı test etmek için **widget-factory** kullanabilirsiniz. Gtk3 için:
+
+.. code-block:: shell
+
+	$ gtk3-widget-factory
+
+.. image:: /_static/images/gtk3-widget-factory.jpg
+  :width: 400
+
 Gdk backend ayarı
 ^^^^^^^^^^^^^^^^^
 **GDK_BACKEND** değişkenini ayarlayarak uygulamanın X11 veya Wayland üzerinde çalışmasını zorlayabilirsiniz.
@@ -129,5 +140,13 @@ Ana eylemler dışındaki eylemleri kapatmak için:
 
 	# Sadece ana eylemleri kullanmak için.
 	export GTK_CORE_DEVICE_EVENTS=1
+
+
+Hata ayıklama
+^^^^^^^^^^^^^
+Gtk uygulamalarında hata ayıklama yapmak için **GTK_DEBUG=all** ve **G_MESSAGES_DEBUG=all** çevresel değişkenleri ayarlanır.
+
+.. image:: /_static/images/gtk-debug-interactive.jpg
+  :width: 400
 
 
