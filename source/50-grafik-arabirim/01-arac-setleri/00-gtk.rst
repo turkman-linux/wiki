@@ -82,4 +82,52 @@ Flatpak uygulamaları temanızı dikkate almıyorsa aşağıdaki komut ile düze
 	# sistem temaları
 	$ flatpak override org.example.application --filesystem=/usr/share/themes:ro
 
+Gdk backend ayarı
+^^^^^^^^^^^^^^^^^
+**GDK_BACKEND** değişkenini ayarlayarak uygulamanın X11 veya Wayland üzerinde çalışmasını zorlayabilirsiniz.
+
+Örneğin wayland uyumlu olmayan bir uygulamayı Xwayland ile açmaya zorlamak için.
+
+.. code-block:: shell
+
+	$ GDK_BACKEND=x11 xfce4-panel
+
+Overlay Scrollbar kapatma
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Gtk3 için **GTK_OVERLAY_SCROLLING=0** değişkenini kullanabilirsiniz.
+
+.. code-block:: shell
+
+	$ GTK_OVERLAY_SCROLLING=0 thunar
+
+Tüm uygulamalarda kullanmak için ise  **~/.config/gtk-3.0/settings.ini** dosyasına aşağıdaki gibi ekleme yapmalısınız:
+
+.. code-block:: shell
+
+	[Settings]
+	gtk-overlay-scrolling = false
+
+Gtk4 için ise Bu seçenek kullanılabilir değildir. Uygulamayı yamalayıp tekrar derlemeniz gerekebilir.
+
+Dokunma test modunu açma
+^^^^^^^^^^^^^^^^^^^^^^^^
+Eğer dokunmatik ekranlı bir cihaz kullanıyorsanız veya yazacağınız uygulamanın dokunmatik ekranda nasıl çalışacağını test etmek istiyorsanız aşağıdaki değişkenleri ayarlamalısınız.
+
+.. code-block:: shell
+
+	# Dokunma test modunu açmak için
+	export GTK_TEST_TOUCHSCREEN=1
+	xfce4-appfinder
+
+
+**Not:** Gtk dokunarak kullanımda çeşitli sorunlar çıkarabilir.
+Bunun için dokunma eylemlerini kapatıp dokunma test modunu açabilirsiniz.
+Ana eylemler dışındaki eylemleri kapatmak için:
+
+.. code-block:: shell
+
+	# Sadece ana eylemleri kullanmak için.
+	export GTK_CORE_DEVICE_EVENTS=1
+
 
