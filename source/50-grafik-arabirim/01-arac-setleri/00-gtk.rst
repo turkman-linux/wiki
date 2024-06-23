@@ -39,7 +39,7 @@ Derlemek için aşağıdaki komut kullanılabilir.
 	gi.require_version('Gtk', '3.0')
 	from gi.repository import Gtk
 	# pencere oluşturma
-	window = Gtk.Window
+	window = Gtk.Window()
 	# pencereyi gösterme
 	window.show_all()
 	# çalıştırma
@@ -86,7 +86,7 @@ Gdk backend ayarı
 ^^^^^^^^^^^^^^^^^
 **GDK_BACKEND** değişkenini ayarlayarak uygulamanın X11 veya Wayland üzerinde çalışmasını zorlayabilirsiniz.
 
-Örneğin wayland uyumlu olmayan bir uygulamayı Xwayland ile açmaya zorlamak için.
+Örneğin wayland uyumlu olmayan bir uygulamayı Xwayland ile açmaya zorlamak için:
 
 .. code-block:: shell
 
