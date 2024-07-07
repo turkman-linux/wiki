@@ -27,7 +27,7 @@ Nvidia sürücünün yüklenmesi
 **Uyarı:** Nvidia sürücü özgür değildir.
 Eğer özgür sürücü kullanmak isterseniz **nouveau** kullanmalısınız.
 
-**Not:** Bu kısım ile ilgili olarak `Archlinux paketine<https://gitlab.archlinux.org/archlinux/packaging/packages/nvidia-utils/-/blob/main/PKGBUILD>`_ bakabilirsiniz.
+**Not:** Bu kısım ile ilgili olarak `Archlinux paketine <https://gitlab.archlinux.org/archlinux/packaging/packages/nvidia-utils/-/blob/main/PKGBUILD>`_ bakabilirsiniz.
 
 Öncelikle `Nvidia <https://www.nvidia.com/Download/index.aspx?lang=en-us>`_ indirme sayfasından sürücümüzü indirelim.
 İşletim sistemi olarak **Linux 64-bit** seçmelisiniz.
