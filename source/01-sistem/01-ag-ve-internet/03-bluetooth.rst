@@ -21,6 +21,18 @@ Ardından servisi etkinleştirelim.
 
 Bağlantının kurulması
 ^^^^^^^^^^^^^^^^^^^^^
+İlk olarak klavye mouse gibi aygıtları bağlayabilmek için gerekli modülü yükleyelim.
+
+.. code-block:: shell
+
+	modprobe uhid
+
+Bunu açilişta yüklemek için aşağıdaki gibi ekleme yapabilirsiniz.
+
+.. code-block:: shell
+
+	echo uhid > /etc/modules-load.d/bluetooth.conf
+
 **bluetoothctl** komutu ile bağlantı kurmamız mümkündür. Öncelikle kullanılabilir aygıtları görüntüleyelim.
 
 .. code-block:: shell
@@ -46,6 +58,7 @@ Arama modundan **ctrl+c** ile çıkalım.
 
 **Not:** Özellikle dual boot kullanıyorsanız donanım sürekli olarak farklı şekilde haberleşmeye çalıştığı için bağlanma sorunları oluşabilir.
 Bu durumun üstesinden gelmenin en basit yolu aygıtı kaldırıp tekrar eklemektir.
+
 
 Otomatik bağlanma
 ^^^^^^^^^^^^^^^^^
