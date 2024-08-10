@@ -11,7 +11,7 @@ Bu durum bilgisayarınızın kararlı çalışmamasına sebep olabilir.
 
 Bilgisayarınızın linux için bir ACPI tablosuna sahip olup olmadığını anlamak için aşağıdaki komutu kullanabilirsiniz.
 
-.. code-lock:: shell
+.. code-block:: shell
 
 	if grep -i linux /sys/firmware/acpi/tables/DSDT 2>/dev/null ; then
 	    echo "Acpi linux destekliyor"
