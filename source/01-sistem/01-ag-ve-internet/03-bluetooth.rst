@@ -54,7 +54,7 @@ Arama modundan **ctrl+c** ile çıkalım.
 
 .. code-block:: shell
 
-	$ bluetoothctl connet 1A:AA:D4:9C:8D:F5
+	$ bluetoothctl connect 1A:AA:D4:9C:8D:F5
 
 **Not:** Özellikle dual boot kullanıyorsanız donanım sürekli olarak farklı şekilde haberleşmeye çalıştığı için bağlanma sorunları oluşabilir.
 Bu durumun üstesinden gelmenin en basit yolu aygıtı kaldırıp tekrar eklemektir.
