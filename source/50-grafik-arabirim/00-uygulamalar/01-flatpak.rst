@@ -9,6 +9,7 @@ Kurulum
 
 .. code-block:: shell
 
+	$ ymp install build-base --no-emerge
 	$ ymp install flatpak
 
 Daha sonra gereken servisleri etkinleştirelim.
@@ -39,7 +40,7 @@ Flathub deposunu aşağıdaki gibi ekleyebilirsiniz.
 Uygulama yükleme
 ^^^^^^^^^^^^^^^^
 **flatpak search** kullanarak uygulama arayabilirsiniz.
-Yüklemek için **flatpak install** kaldırmak için ise **flatpak remove** komutu kullanılır.
+Yüklemek için **flatpak install** kaldırmak için ise **flatpak remove veya flatpak uninstall** komutları kullanılır.
 
 **Not:** Yükleme ve kaldırma için **appid** değeri kullanılır.
 
