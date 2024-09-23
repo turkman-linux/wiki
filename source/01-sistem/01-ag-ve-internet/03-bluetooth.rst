@@ -1,7 +1,7 @@
 Bluetooth
 =========
 Bluetooth bağlantısı sağlamak için bluez kullanılır.
-Ayrıca buletooth kartının sürücüsü için :ref:`linux-firmware<linux-firmware>` gerekmektedir.
+Ayrıca bluetooth kartının sürücüsü için :ref:`linux-firmware<linux-firmware>` gerekmektedir.
 
 Kurulum
 ^^^^^^^

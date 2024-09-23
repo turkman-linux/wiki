@@ -53,7 +53,7 @@ fuse.conf dosyasında iki yapılandırma değişkeni bulunur:
 
 Fuse ile dosya sistemi yazma
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-**fuse** kulanarak dosya sistemi oluşturabiliriz. Aşağıda örnek bir dosya sistemi kodu bulunmaktadır:
+**fuse** kullanarak dosya sistemi oluşturabiliriz. Aşağıda örnek bir dosya sistemi kodu bulunmaktadır:
 
 .. code-block:: c
 
