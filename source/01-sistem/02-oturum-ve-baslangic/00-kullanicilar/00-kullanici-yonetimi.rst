@@ -89,7 +89,7 @@ Bu yöntemde **openssl** komutundan yararlanılır.
 	$ openssl passwd -6 'parola'
 	-> $6$GBPcPGqQLyLcYkKl$1z5BOQB36E31.VIJyGJXwCc6invR2WgeaSI9Jz7QZU/QZbffEm.J8edQkyIBtRWpSa.VFob3p/BH84Unag1Y60
 	# -6 sha512 formatında hash üretmek için.
-	# elde ettiğimiz değer ile parola beirleyelim.
+	# elde ettiğimiz değer ile parola belirleyelim.
 	$ usermod -p <hash-değeri> pingu
 	# Şu şekilde de tanımlayabilirsiniz.
 	$ usermod -p "$(openssl passwd -6 'parola')" pingu

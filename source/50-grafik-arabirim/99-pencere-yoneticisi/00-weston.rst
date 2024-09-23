@@ -1,6 +1,6 @@
 Weston
 ======
-Weston basit wayland pencere yöneticisidir. Genellikle test amaçlı kullanılır fakar masaüstü ortamı olarak kullanmak da mümkündür.
+Weston basit wayland pencere yöneticisidir. Genellikle test amaçlı kullanılır fakat masaüstü ortamı olarak kullanmak da mümkündür.
 
 .. image:: /_static/images/weston-desktop.jpg
   :width: 400

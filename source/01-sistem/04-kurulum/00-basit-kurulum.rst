@@ -89,7 +89,7 @@ Sisteme **ymp chroot** komutu ile girelim.
 	done
 	$ chroot /target
 
-Şimdi de eğer uefi kulanıyorsanız efivar bağlayalım.
+Şimdi de eğer uefi kullanıyorsanız efivar bağlayalım.
 
 .. code-block:: shell
 

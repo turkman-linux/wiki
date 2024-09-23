@@ -12,7 +12,7 @@ Türkmen Linux bağımsız tabanlı bir GNU/Linux dağıtımıdır. Kendisine ai
 Türkmen Linux Türkiye originli bir dağıtımdır. 🇹🇷 Geliştirilme sebebi yeni nesil teknolojileri kullanan bağımsız bir dağıtım oluşturmak ve kullanım kolaylığı sağlamaktır.
 
 * Bütün paketler header dosyaları ve static kütüphaneler ile beraber gelmektedir. Bu sayede derleme yapması diğer dağıtımlardan daha kolaydır.
-* Hızla çalışan karışık (ikili ve kaynak) paket sistemine sahiptir. İsteyenler kaynak koddan paket kurarken isteyenler derlenmiş paketleri kullanrabilirler.
+* Hızla çalışan karışık (ikili ve kaynak) paket sistemine sahiptir. İsteyenler kaynak koddan paket kurarken isteyenler derlenmiş paketleri kullanabilirler.
 
 Logonun anlamı
 ^^^^^^^^^^^^^^

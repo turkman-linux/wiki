@@ -88,7 +88,7 @@ Değişkenler
 * **email** : Paketçinin email adresidir.
 * **maintainer** : Paket bakımcısının adıdır. (veya nickname)
 
-Not: ymp derleme işleminin ardından paket boyutunu azaltmak için **strip** işlemini otomatik oralak uygulamaktadır. Bu durum bazı paketlerin bozulmasına sebep olabilir. Bunu engellemek için **dontstrip** değişkeni tanımlayarak bir değer atayabilirsiniz.
+Not: ymp derleme işleminin ardından paket boyutunu azaltmak için **strip** işlemini otomatik olarak uygulamaktadır. Bu durum bazı paketlerin bozulmasına sebep olabilir. Bunu engellemek için **dontstrip** değişkeni tanımlayarak bir değer atayabilirsiniz.
 
 
 Diziler
