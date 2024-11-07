@@ -76,3 +76,40 @@ Ardından pencere gönderecek makinada **DISPLAY** değişkenimizi aşağıdaki 
 **Önemli Not:** Ağ bağlantınız yavaşsa performans sorunları olabilir. 
 
 
+Xephyr
+^^^^^^
+Xephyr X11 içerisinde izole şekilde çalışan başka bir X11 ortamı sağlar. Bu sayede uygulamaları kolayca test edebilirsiniz.
+
+Başlatmak için:
+
+.. code-block:: shell
+
+	Xephyr :1
+
+Daha sonra içerisinde bir uygulama açmak için aşağıdaki gibi kullanabiliriz.
+
+.. code-block:: shell
+
+	export DISPLAY=:1
+	xterm
+
+Xvfb
+^^^^
+Xvfb herhangi bir ekran olmadan sanal bir X11 ortamı oluşturmayı sağlar. Bu sayede bir uygulamayı ekran kullanmadan test edebilirsiniz.
+
+Kullanımı:
+
+.. code-block:: shell
+
+	xvfb-run xterm
+
+Bununla birlikte xvfb oturumu başlatıp kullanabilirsiniz.
+
+.. code-block:: shell
+
+	# Xvfb arkada başlatalım
+	Xvfb :1 &
+	# xterm çalıştıralım
+	export DISPLAY=:1
+	xterm
+
