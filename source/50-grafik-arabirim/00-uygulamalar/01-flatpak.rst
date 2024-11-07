@@ -34,7 +34,7 @@ Flathub deposunu aşağıdaki gibi ekleyebilirsiniz.
 
 .. code-block:: shell
 
-	alias flatpak=''flatpak --user
+	alias flatpak='flatpak --user'
 
 
 Uygulama yükleme

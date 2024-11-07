@@ -1,2 +1,3 @@
 build/
 source/99-kodlama
+*.pyc
