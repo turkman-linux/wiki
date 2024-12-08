@@ -14,7 +14,7 @@ Ardından **seatd** ve **devfs** servislerini etkinleştirmelisiniz.
 .. code-block:: shell
 
 	# paketi kuralım
-	$ ymp install sway
+	$ ymp install @hyprland
 	# servisleri etkinleştirmek için
 	$ rc-update add seatd
 	$ rc-update add devfs
