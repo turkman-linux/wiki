@@ -42,3 +42,22 @@ pip komutunu etkinleştirmek için aşağıdaki komutu kullanın.
 
 İlk komut python ile gelen pip modülünü çalıştırarak pip kullanmanıza olanak tanır.
 İkinci komut ise pip sürümünü güncellemek için kullanılır.
+
+Venv ortamı
+^^^^^^^^^^^
+Python size sistemden bağımsız olarak çalışabileceğiniz sanal bir ortam tanımlama imkanı sağlar. 
+Bu alanı oluşturmak için boş bir dizinde aşağıdaki komutu çalıştıralım.
+
+.. code-block:: shell
+
+	$ python3 -m venv .
+
+Ardından bu alanı kullanmaya başlamak için terminale aşağıdaki komutu girelim.
+
+.. code-block:: shell
+
+	$ source bin/activate
+
+Bu işlemi yaptıktan sonra terminalimizi kapatana kadarki tüm çalıştıracağımız **pip** komutları ve python ile kurduğumuz paketler **venv** içinden çalışacaktır.
+
+
