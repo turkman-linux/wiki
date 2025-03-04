@@ -23,5 +23,5 @@ Ardından maximum değeri öğrenelim.
     # %50 parlaklık için
     echo 12000 > /sys/class/backlight/intel_backlight/brightness
 
-**Not** bu işlem için root gereklidir. %0 parlaklık ekranın tammamen karakmasına neden olabilir.
+**Not** bu işlem için root gereklidir. %0 parlaklık ekranın tamamen kararmasına neden olabilir.
 
