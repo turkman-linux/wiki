@@ -42,3 +42,17 @@ Ardından diski kapatabiliriz.
 
 	cryptsetup luksClose example
 
+Parola değiştirme
++++++++++++++++++
+Öncelikle parola eklemiz gerekmektedir. Bunun için aşağıdaki gibi bir yol kullanmalıyız.
+
+.. code-block:: shell
+
+	cryptsetup luksAddKey /dev/sda
+
+Daha sonra eski parolamızı kaldıralım.
+
+.. code-block:: shell
+
+	cryptsetup luksRemoveKey /dev/sda
+
