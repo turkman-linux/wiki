@@ -28,7 +28,7 @@ Ardından diski etkinleştirelim.
 	cryptsetup luksOpen /dev/sda example
 
 Bu şekilde diski çözdükten sonra **/dev/mapper/example** adında bir block aygıt oluşturulur.
-Bu lpock aygıtı bölümlendirip kullanamilirsiniz.
+Bu block aygıtı bölümlendirip kullanabilirsiniz.
 
 Çözülmüş diskinizi tekrar kapatmak için öncelikle diskin tüm bölümlerinin bağlantısını kesmelisiniz.
 
