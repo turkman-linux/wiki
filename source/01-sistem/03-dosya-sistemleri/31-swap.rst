@@ -44,9 +44,6 @@ Bu işlem diske 0 yazarak çalışır. Diskin hızına bağlı olarak uzun süre
 	# loop algıtını formatlayalım
 	mkswap "$loop"
 
-.. code-block:: shell
-
-
 Swap alanının etkinleştirilmesi
 +++++++++++++++++++++++++++++++
 Swap alanını **swapon** komutu kullanarak etkinleştirebiliriz.
