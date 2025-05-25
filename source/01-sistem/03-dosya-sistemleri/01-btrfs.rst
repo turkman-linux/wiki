@@ -1,6 +1,5 @@
-Btrfs Dosya Sistemi
-===================
-
+Btrfs
+=====
 Btrfs, Linux çekirdeği için geliştirilmiş bir dosya sistemidir. Gelişmiş özellikleri ve esnek yapısıyla, modern depolama ihtiyaçlarını karşılamak üzere tasarlanmıştır.
 
 Disk bağlama
