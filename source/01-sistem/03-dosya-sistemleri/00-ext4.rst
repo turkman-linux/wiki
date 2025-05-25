@@ -5,11 +5,12 @@ ext4
 Diski bağlama
 ^^^^^^^^^^^^^
 ext4 diskleri bağlamak için öncelikle ext4 çekirdek modülünün etkin olması gerekmektedir.
-**lsmod | grep ext4** komutunu kullanarak etkın olup olmadığını öğrenebilirsiniz.
+**/sys/fs/ext4** dizini olup olmadığına bakaramk etkın olup olmadığını öğrenebilirsiniz.
+Eğer bu dizin yoksa modülü yüklemek için aşağıdaki komutu kullanabilirsiniz.
 
 .. code-block:: shell
 
-	$ lsmod | grep ext4
+	$ modprobe ext4
 
 Daha sonra aşağıdakı komut yardımı ile diski bağlayabiliriz.
 
@@ -32,7 +33,7 @@ Daha donra diski biçimlendirelim.
 
 	$ mkfs.ext4 /dev/sda1
 
-**Not:** diski biçimlendirmek verileriniza kalıca hasar verebilir.
+**Not:** diski biçimlendirmek verilerinize kalıca hasar verebilir.
 
 Günlüklemeyi kapatma
 ^^^^^^^^^^^^^^^^^^^^
