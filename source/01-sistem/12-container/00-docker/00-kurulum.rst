@@ -44,3 +44,14 @@ Servisi elle başlatmak için ise aşağıdaki gibi bir yol izlenebilir.
 	$ containerd &
 	$ dockerd &
 
+Cgroup controller değiştirme
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Docker cgroup controller olarak cgroupfs veya systemd kullanmaktadır.
+Eğer cgroup controller olarak yanış ayarlandıysa docker çalışamaz.
+Bunu elle ayarlamak için docker servisi komutuna aşağıdaki parametre eklenmelidir.
+
+.. code-block:: shell
+
+	$ dockerd --exec-opt native.cgroupdriver=cgroupfs
+
+Bu parametreyi **/etc/conf.d/docker** içerisinden ekleyebilirsiniz.
