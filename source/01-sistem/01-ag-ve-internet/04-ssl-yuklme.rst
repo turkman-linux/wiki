@@ -2,7 +2,7 @@ Ssl sertifikası yükleme
 ^^^^^^^^^^^^^^^^^^^^^^^
 Eğer elimizde .crt uzantılı bir dosya varsa ve bunu metin düzenleyici ile açamıyorsak aşağıdaki gibi .pem uzantılı hale çevirelim:
 
-..code-block:: shell
+.. code-block:: shell
 
 	$ openssl x509 -in ./my-ssl-cert.crt -out ./my-ssl-cert.pem -outform PEM
 
