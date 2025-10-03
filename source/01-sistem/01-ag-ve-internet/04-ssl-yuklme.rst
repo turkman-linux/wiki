@@ -33,7 +33,7 @@ Bu sebeple firefox için de elle yüklemek gerekli olabilir.
 
 Bunun için sırasıyla:
 
-..code-block:: shell
+.. code-block:: shell
 
   -> Ayarlar
   -> Gizlilik ve Güvenlik
