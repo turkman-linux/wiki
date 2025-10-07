@@ -48,7 +48,6 @@ Bu dosyayı **shared** olarak derleyelim.
 
 Eğer değiştirdiğimiz fonksiyona ihtiyacımız varsa aşağıdaki gibi kullanarak elde edebiliriz.
 
-
 .. code-block:: C
 
     #include <stdio.h>
@@ -61,3 +60,5 @@ Eğer değiştirdiğimiz fonksiyona ihtiyacımız varsa aşağıdaki gibi kullan
     }
 
 Yukarıdaki gibi yaparak asıl fonksiyona **orig** adı ile erişebiliriz.
+
+**Not:** Türkmen linuxta güvenlik gereği bu çevreler değişken görmezden gelinir. bunun yerine dosya konumunu **/etc/ld.so.preload** içine yazmalısınız.
