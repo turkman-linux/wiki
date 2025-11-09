@@ -53,15 +53,20 @@ Son olarak içerisine girmek için aşağıdaki gibi bir komut kullanalım. Bu k
 
 .. code-block:: shell
 
+	# dbus session bus dizinini bulalım
+	$ dbus_dir=$(echo $DBUS_SESSION_BUS_ADDRESS | cut -f2 -d"=" | cut -f1 -d",")
+	# shell çalıştıralım
 	$ bwrap --bind ./alpine / \
 	    --dev /dev \
 	    --proc /proc \
 	    --bind /sys /sys \
 	    --dev-bind /dev/dri /dev/dri \
 	    --tmpfs /tmp \
+	    --setenv PS1 "\$ (alpine) " \
 	    --ro-bind / /system \
 	    --bind /tmp/.X11-unix /tmp/.X11-unix \
 	    --bind $XDG_RUNTIME_DIR $XDG_RUNTIME_DIR \
+	    --bind $dbus_dir $dbus_dir \
 	    --bind $HOME $HOME \
 	    -- /bin/ash -i
 
