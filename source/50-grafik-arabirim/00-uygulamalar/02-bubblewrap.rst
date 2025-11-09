@@ -26,12 +26,19 @@ Oluşturulan kısıtlı alanda girmiş olduğunuz komut çalıştırılır. Örn
 	    -- /bin/bash -i 
 
 Yukarıdaki komut ile:
+
 * kök dizin yazılamaz bağlandı
+
 * ev dizin yazılabilir bağlandı
+
 * /dev /sys /proc dizinleri bağlanı
+
 * ev dizini değişkeni ayarlandı
+
 * hostname ayarlandı
+
 * parametre algılama sonlandırıldı.
+
 * /bin/bash çalıştırıldı.
 
 Başka dağıtım ile kullanma
