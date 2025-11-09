@@ -4,7 +4,7 @@ Bubblewrap root yetkisine ihtiyaç duymadan uygulamaları kısıtlı alanda çal
 
 Türkmen linuxa yüklemek için aşağıdaki komutu kullanabilirsiniz:
 
-..code-block:: shell
+.. code-block:: shell
 
 	$ ymp install bubblewrap
 
