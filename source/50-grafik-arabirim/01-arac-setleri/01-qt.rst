@@ -1,0 +1,70 @@
+Qt
+==
+Qt bör özgür grafik araç setidir. C++ ile yazılmıştır ve uyumlu programlama dilleri ile kullanılabilir.
+
+Örneğin aşağıda bir basit bir Qt C++ kodu örneği verilmiştir.
+
+.. code-block:: Cpp
+
+	#include <QApplication>
+	#include <QPushButton>
+
+	int main(int argc, char *argv[]) {
+	    // Qapplication oluştur
+	    QApplication a(argc, argv);
+	    // Bir button oluştur
+	    QPushButton button ("Hello world!");
+	    // Bu button nesnesini göster
+	    button.show();
+	    // Uygulamayı başlat
+	    return a.exec();
+	}
+
+
+Uygulama derleme
+++++++++++++++++
+Qt uygulamalarını derlemek için ise **qmake** adı verilen bir derleme talimatından faydalanılır.
+
+.. code-block:: shell
+
+	QT       += core gui
+
+	greaterThan(QT_MAJOR_VERSION, 6): QT += widgets
+
+	TARGET = helloworld
+	TEMPLATE = app
+
+	SOURCES += main.cpp
+
+Bu dosyayı **hello.pro** şeklinde kaydedip şu şekilde derleyebiliriz.
+
+.. code-block:: shell
+
+	$ qmake
+	$ make
+
+Ayrıca qmake yerine şu şekilde elle derlememiz de mümkündür.
+
+.. code-block:: shell
+
+	$ g++ main.cpp -c `pkg-config --cflags Qt6Core Qt6Gui Qt6Widgets`
+	$ g++ -o main main.o `pkg-config --libs Qt6Core Qt6Gui Qt6Widget`
+
+QT_QPA_PLATFORM
++++++++++++++++
+Qt uygulamaları varsayılan olarak X11 veya Wayland üzerinde hangisi ile çalışıyorsa ona uygun şekilde pencere oluşturur. 
+Eğer Wayland kullanıyorsanız ve uygulamalın Xwayland ile çalışmasını istiyorsanız aşağıdaki gibi değişken ayarlayabilirsiniz.
+
+.. code-block:: shell
+
+	# önce xcb eğer kullanılabilir değilse wayland ayarlamak için
+	$ export QT_QPA_PLATFORM=xcb;wayland
+	$ ./main
+	# alternatif olarak şu da geçerli olur.
+	$ ./main -platform xcb;wayland
+
+Ayrıca Qt uygulamalarını X11 veya Wayland yerine doğrudan framebuffer üzerinde çalıştırmak da mümkündür. Bunun için **linuxfb** olarak başlatmalısınız.
+
+.. code-block:: shell
+
+	$ QT_QPA_PLATFORM=linuxfb ./main
