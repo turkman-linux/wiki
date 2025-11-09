@@ -1,6 +1,6 @@
 Qt
 ==
-Qt bör özgür grafik araç setidir. C++ ile yazılmıştır ve uyumlu programlama dilleri ile kullanılabilir.
+Qt bir özgür grafik araç setidir. C++ ile yazılmıştır ve uyumlu programlama dilleri ile kullanılabilir.
 
 Örneğin aşağıda bir basit bir Qt C++ kodu örneği verilmiştir.
 
@@ -68,3 +68,12 @@ Ayrıca Qt uygulamalarını X11 veya Wayland yerine doğrudan framebuffer üzeri
 .. code-block:: shell
 
 	$ QT_QPA_PLATFORM=linuxfb ./main
+
+Temalama
+++++++++
+Qt uygulamasının gtk ile aynı temayı kullanması için aşağıdaki çevresel değişkeni kullanabilirsiniz:
+
+.. code-block:: shell
+
+	$ export QT_QPA_PLATFORMTHEME=gtk3
+
