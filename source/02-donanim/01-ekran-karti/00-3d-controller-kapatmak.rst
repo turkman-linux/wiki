@@ -18,11 +18,14 @@ Bunun için öncelikle **3D controller** aygıtımızı tespit edelim.
 	    fi
 	done
 
-Daha sonra hbulduğumuz pci adını kullanarak donanımı kapatalım. Bu komutu başlangıçta çalıştırmamız gereklidir.
+Daha sonra bulduğumuz pci adını kullanarak donanımı kapatalım. Bu komutu başlangıçta çalıştırmamız gereklidir.
 
 .. code-block:: shell
 
 	echo 1 > /sys/bus/pci/devices/0000:<pci-adi>/remove
+
+**Not:** Bu işlemi grafik arabirim açıkken yaptığınızda grafik arabirimde beklenmedik sorunlar oluşabilir.
+Bu sebeple bu işlemi grafik arabirimden servisi başlamadan önce çalıştırılmalıdır.
 
 **Not:** Türkmen linuxta bu iş için **disable-secondary-gpu** adında bir servis oluşturulmuştur.
 Bu servisi etkinleştirmeniz yeterli olmaktadır.
@@ -30,3 +33,4 @@ Bu servisi etkinleştirmeniz yeterli olmaktadır.
 .. code-block:: shell
 
 	$ rc-update add disable-secondary-gpu
+
