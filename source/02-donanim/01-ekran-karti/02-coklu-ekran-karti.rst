@@ -7,7 +7,7 @@ Diğer ekran kartınızı kullanmak için **DRI_PRIME** çevresel değişkeni ay
 
 .. code-block:: shell
 
-	$ lspci | grep -ie vga -ie 3d
+	$ lspci -nn | grep -ie vga -ie 3d
 	# X11 kullanıyorsanız
 	$ xrandr --listproviders
 
@@ -17,6 +17,10 @@ Diğer ekran kartınızı kullanmak için **DRI_PRIME** çevresel değişkeni ay
 
 	# 1 numaralı ekran kartı (2. ekran kartı) için:
 	$ DRI_PRIME=1 firefox
+	# Veya vendor:product şeklinde de belirtebilirsiniz
+	$ DRI_PRIME=1002:699f firefox
+
+**Not:** Vulkan ile çalışan uygulamalarda da kullanıma zorlamak için **DRI_PRIME=1!** şeklinde tanımlanır.
 
 Eğer sürekli olarak belirlediğiniz ekran kartını kullanmak isterseniz bu değişkeni **/etc/profile.d/** dizini 
 altında tanımlamanız yeterli olur.
