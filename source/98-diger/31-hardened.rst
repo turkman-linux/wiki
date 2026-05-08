@@ -38,6 +38,8 @@ Kök dizin **nosuid** olarak bağlanır. Suid ihtiyacı olan dosyalar **/etc/sui
 
 Pipewire sistem servisi olarak çalışmaktadır. Bu sayede /dev/snd dizinine erişime ihtiyaç duymadan pipewire kullanılabilmektedir.
 
+**su** komutu olarak suidless-su kullanılır. https://gitlab.com/turkmen-linux/devel/sources/suidless-su Bu sayede suid biti gerekmeden çalışır. 
+
 Diğer
 +++++
 Udisks2 parolasız disk bağlama özelliği kapatılmıştır. Disk bağlamak için yetkili kullanıcı gerekmektedir.
